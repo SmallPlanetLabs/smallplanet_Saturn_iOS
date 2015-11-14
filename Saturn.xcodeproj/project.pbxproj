@@ -7,15 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C403A3EA1BF787320089299D /* Saturn.h in Headers */ = {isa = PBXBuildFile; fileRef = C403A3E91BF787320089299D /* Saturn.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C403A3F11BF787330089299D /* Saturn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C403A3E61BF787320089299D /* Saturn.framework */; };
-		C403A3F61BF787330089299D /* SaturnTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C403A3F51BF787330089299D /* SaturnTests.swift */; };
-		C403A4011BF788050089299D /* SaturnObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C403A4001BF788050089299D /* SaturnObject.swift */; };
-		C403A4041BF78D3D0089299D /* AEXML.swift in Sources */ = {isa = PBXBuildFile; fileRef = C403A4031BF78D3D0089299D /* AEXML.swift */; };
-		C403A4071BF78FE60089299D /* String+CGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = C403A4061BF78FE60089299D /* String+CGFloat.swift */; };
-		C449A7691BF791D100B90898 /* CGRect+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = C449A7681BF791D100B90898 /* CGRect+String.swift */; };
-		C449A76B1BF796EE00B90898 /* UIColor+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = C449A76A1BF796EE00B90898 /* UIColor+String.swift */; };
-		C449A76E1BF7A4A600B90898 /* UIView+Saturn.swift in Sources */ = {isa = PBXBuildFile; fileRef = C449A76D1BF7A4A600B90898 /* UIView+Saturn.swift */; };
+		C402B4AB1BF7F5CA00FE563B /* Saturn.h in Headers */ = {isa = PBXBuildFile; fileRef = C402B4A01BF7F5CA00FE563B /* Saturn.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C402B4AC1BF7F5CA00FE563B /* SaturnObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C402B4A11BF7F5CA00FE563B /* SaturnObject.swift */; };
+		C402B4AD1BF7F5CA00FE563B /* AEXML.swift in Sources */ = {isa = PBXBuildFile; fileRef = C402B4A31BF7F5CA00FE563B /* AEXML.swift */; };
+		C402B4AE1BF7F5CA00FE563B /* CGRect+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = C402B4A51BF7F5CA00FE563B /* CGRect+String.swift */; };
+		C402B4AF1BF7F5CA00FE563B /* String+CGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = C402B4A61BF7F5CA00FE563B /* String+CGFloat.swift */; };
+		C402B4B01BF7F5CA00FE563B /* UIColor+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = C402B4A71BF7F5CA00FE563B /* UIColor+String.swift */; };
+		C402B4B11BF7F5CA00FE563B /* UIView+Saturn.swift in Sources */ = {isa = PBXBuildFile; fileRef = C402B4A91BF7F5CA00FE563B /* UIView+Saturn.swift */; };
+		C402B4B71BF7F82700FE563B /* Saturn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C403A3E61BF787320089299D /* Saturn.framework */; };
+		C402B4B81BF7F94D00FE563B /* SaturnTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C402B4B41BF7F5DD00FE563B /* SaturnTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,18 +29,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C402B49F1BF7F5CA00FE563B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C402B4A01BF7F5CA00FE563B /* Saturn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Saturn.h; sourceTree = "<group>"; };
+		C402B4A11BF7F5CA00FE563B /* SaturnObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaturnObject.swift; sourceTree = "<group>"; };
+		C402B4A31BF7F5CA00FE563B /* AEXML.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AEXML.swift; sourceTree = "<group>"; };
+		C402B4A51BF7F5CA00FE563B /* CGRect+String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGRect+String.swift"; sourceTree = "<group>"; };
+		C402B4A61BF7F5CA00FE563B /* String+CGFloat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+CGFloat.swift"; sourceTree = "<group>"; };
+		C402B4A71BF7F5CA00FE563B /* UIColor+String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+String.swift"; sourceTree = "<group>"; };
+		C402B4A91BF7F5CA00FE563B /* UIView+Saturn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Saturn.swift"; sourceTree = "<group>"; };
+		C402B4B31BF7F5DD00FE563B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C402B4B41BF7F5DD00FE563B /* SaturnTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaturnTests.swift; sourceTree = "<group>"; };
 		C403A3E61BF787320089299D /* Saturn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Saturn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C403A3E91BF787320089299D /* Saturn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Saturn.h; sourceTree = "<group>"; };
-		C403A3EB1BF787320089299D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C403A3F01BF787330089299D /* SaturnTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SaturnTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C403A3F51BF787330089299D /* SaturnTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaturnTests.swift; sourceTree = "<group>"; };
-		C403A3F71BF787330089299D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C403A4001BF788050089299D /* SaturnObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaturnObject.swift; sourceTree = "<group>"; };
-		C403A4031BF78D3D0089299D /* AEXML.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AEXML.swift; sourceTree = "<group>"; };
-		C403A4061BF78FE60089299D /* String+CGFloat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+CGFloat.swift"; sourceTree = "<group>"; };
-		C449A7681BF791D100B90898 /* CGRect+String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGRect+String.swift"; sourceTree = "<group>"; };
-		C449A76A1BF796EE00B90898 /* UIColor+String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+String.swift"; sourceTree = "<group>"; };
-		C449A76D1BF7A4A600B90898 /* UIView+Saturn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Saturn.swift"; sourceTree = "<group>"; };
+		C403A3F01BF787330089299D /* Saturn iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Saturn iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,18 +55,66 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C403A3F11BF787330089299D /* Saturn.framework in Frameworks */,
+				C402B4B71BF7F82700FE563B /* Saturn.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C402B49E1BF7F5CA00FE563B /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				C402B49F1BF7F5CA00FE563B /* Info.plist */,
+				C402B4A01BF7F5CA00FE563B /* Saturn.h */,
+				C402B4A11BF7F5CA00FE563B /* SaturnObject.swift */,
+				C402B4A21BF7F5CA00FE563B /* ThirdParty */,
+				C402B4A41BF7F5CA00FE563B /* TypeExtensions */,
+				C402B4A81BF7F5CA00FE563B /* UIKitExtensions */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		C402B4A21BF7F5CA00FE563B /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				C402B4A31BF7F5CA00FE563B /* AEXML.swift */,
+			);
+			path = ThirdParty;
+			sourceTree = "<group>";
+		};
+		C402B4A41BF7F5CA00FE563B /* TypeExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				C402B4A51BF7F5CA00FE563B /* CGRect+String.swift */,
+				C402B4A61BF7F5CA00FE563B /* String+CGFloat.swift */,
+				C402B4A71BF7F5CA00FE563B /* UIColor+String.swift */,
+			);
+			path = TypeExtensions;
+			sourceTree = "<group>";
+		};
+		C402B4A81BF7F5CA00FE563B /* UIKitExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				C402B4A91BF7F5CA00FE563B /* UIView+Saturn.swift */,
+			);
+			path = UIKitExtensions;
+			sourceTree = "<group>";
+		};
+		C402B4B21BF7F5DD00FE563B /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				C402B4B31BF7F5DD00FE563B /* Info.plist */,
+				C402B4B41BF7F5DD00FE563B /* SaturnTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
 		C403A3DC1BF787320089299D = {
 			isa = PBXGroup;
 			children = (
-				C403A3E81BF787320089299D /* Saturn */,
-				C403A3F41BF787330089299D /* SaturnTests */,
+				C402B4B21BF7F5DD00FE563B /* Tests */,
+				C402B49E1BF7F5CA00FE563B /* Source */,
 				C403A3E71BF787320089299D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -75,57 +123,9 @@
 			isa = PBXGroup;
 			children = (
 				C403A3E61BF787320089299D /* Saturn.framework */,
-				C403A3F01BF787330089299D /* SaturnTests.xctest */,
+				C403A3F01BF787330089299D /* Saturn iOS Tests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		C403A3E81BF787320089299D /* Saturn */ = {
-			isa = PBXGroup;
-			children = (
-				C403A3EB1BF787320089299D /* Info.plist */,
-				C403A3E91BF787320089299D /* Saturn.h */,
-				C403A4001BF788050089299D /* SaturnObject.swift */,
-				C403A4021BF78D3C0089299D /* ThirdParty */,
-				C403A4051BF78FD70089299D /* TypeExtensions */,
-				C449A76C1BF7A48800B90898 /* UIKitExtensions */,
-			);
-			path = Saturn;
-			sourceTree = "<group>";
-		};
-		C403A3F41BF787330089299D /* SaturnTests */ = {
-			isa = PBXGroup;
-			children = (
-				C403A3F51BF787330089299D /* SaturnTests.swift */,
-				C403A3F71BF787330089299D /* Info.plist */,
-			);
-			path = SaturnTests;
-			sourceTree = "<group>";
-		};
-		C403A4021BF78D3C0089299D /* ThirdParty */ = {
-			isa = PBXGroup;
-			children = (
-				C403A4031BF78D3D0089299D /* AEXML.swift */,
-			);
-			path = ThirdParty;
-			sourceTree = "<group>";
-		};
-		C403A4051BF78FD70089299D /* TypeExtensions */ = {
-			isa = PBXGroup;
-			children = (
-				C403A4061BF78FE60089299D /* String+CGFloat.swift */,
-				C449A7681BF791D100B90898 /* CGRect+String.swift */,
-				C449A76A1BF796EE00B90898 /* UIColor+String.swift */,
-			);
-			path = TypeExtensions;
-			sourceTree = "<group>";
-		};
-		C449A76C1BF7A48800B90898 /* UIKitExtensions */ = {
-			isa = PBXGroup;
-			children = (
-				C449A76D1BF7A4A600B90898 /* UIView+Saturn.swift */,
-			);
-			path = UIKitExtensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,16 +135,16 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C403A3EA1BF787320089299D /* Saturn.h in Headers */,
+				C402B4AB1BF7F5CA00FE563B /* Saturn.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		C403A3E51BF787320089299D /* Saturn */ = {
+		C403A3E51BF787320089299D /* Saturn iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C403A3FA1BF787330089299D /* Build configuration list for PBXNativeTarget "Saturn" */;
+			buildConfigurationList = C403A3FA1BF787330089299D /* Build configuration list for PBXNativeTarget "Saturn iOS" */;
 			buildPhases = (
 				C403A3E11BF787320089299D /* Sources */,
 				C403A3E21BF787320089299D /* Frameworks */,
@@ -155,14 +155,14 @@
 			);
 			dependencies = (
 			);
-			name = Saturn;
+			name = "Saturn iOS";
 			productName = Saturn;
 			productReference = C403A3E61BF787320089299D /* Saturn.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		C403A3EF1BF787330089299D /* SaturnTests */ = {
+		C403A3EF1BF787330089299D /* Saturn iOS Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C403A3FD1BF787330089299D /* Build configuration list for PBXNativeTarget "SaturnTests" */;
+			buildConfigurationList = C403A3FD1BF787330089299D /* Build configuration list for PBXNativeTarget "Saturn iOS Tests" */;
 			buildPhases = (
 				C403A3EC1BF787330089299D /* Sources */,
 				C403A3ED1BF787330089299D /* Frameworks */,
@@ -173,9 +173,9 @@
 			dependencies = (
 				C403A3F31BF787330089299D /* PBXTargetDependency */,
 			);
-			name = SaturnTests;
+			name = "Saturn iOS Tests";
 			productName = SaturnTests;
-			productReference = C403A3F01BF787330089299D /* SaturnTests.xctest */;
+			productReference = C403A3F01BF787330089299D /* Saturn iOS Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -208,8 +208,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C403A3E51BF787320089299D /* Saturn */,
-				C403A3EF1BF787330089299D /* SaturnTests */,
+				C403A3E51BF787320089299D /* Saturn iOS */,
+				C403A3EF1BF787330089299D /* Saturn iOS Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -236,12 +236,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C449A7691BF791D100B90898 /* CGRect+String.swift in Sources */,
-				C403A4011BF788050089299D /* SaturnObject.swift in Sources */,
-				C403A4041BF78D3D0089299D /* AEXML.swift in Sources */,
-				C403A4071BF78FE60089299D /* String+CGFloat.swift in Sources */,
-				C449A76B1BF796EE00B90898 /* UIColor+String.swift in Sources */,
-				C449A76E1BF7A4A600B90898 /* UIView+Saturn.swift in Sources */,
+				C402B4AE1BF7F5CA00FE563B /* CGRect+String.swift in Sources */,
+				C402B4AF1BF7F5CA00FE563B /* String+CGFloat.swift in Sources */,
+				C402B4AC1BF7F5CA00FE563B /* SaturnObject.swift in Sources */,
+				C402B4AD1BF7F5CA00FE563B /* AEXML.swift in Sources */,
+				C402B4B01BF7F5CA00FE563B /* UIColor+String.swift in Sources */,
+				C402B4B11BF7F5CA00FE563B /* UIView+Saturn.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,7 +249,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C403A3F61BF787330089299D /* SaturnTests.swift in Sources */,
+				C402B4B81BF7F94D00FE563B /* SaturnTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,7 +258,7 @@
 /* Begin PBXTargetDependency section */
 		C403A3F31BF787330089299D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = C403A3E51BF787320089299D /* Saturn */;
+			target = C403A3E51BF787320089299D /* Saturn iOS */;
 			targetProxy = C403A3F21BF787330089299D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -361,11 +361,11 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Saturn/Info.plist;
+				INFOPLIST_FILE = Source/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.smallplanet.Saturn;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Saturn;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -379,11 +379,11 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Saturn/Info.plist;
+				INFOPLIST_FILE = Source/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.smallplanet.Saturn;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Saturn;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -391,7 +391,7 @@
 		C403A3FE1BF787330089299D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = SaturnTests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.smallplanet.SaturnTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -401,7 +401,7 @@
 		C403A3FF1BF787330089299D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = SaturnTests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.smallplanet.SaturnTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -420,7 +420,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C403A3FA1BF787330089299D /* Build configuration list for PBXNativeTarget "Saturn" */ = {
+		C403A3FA1BF787330089299D /* Build configuration list for PBXNativeTarget "Saturn iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C403A3FB1BF787330089299D /* Debug */,
@@ -429,7 +429,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C403A3FD1BF787330089299D /* Build configuration list for PBXNativeTarget "SaturnTests" */ = {
+		C403A3FD1BF787330089299D /* Build configuration list for PBXNativeTarget "Saturn iOS Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C403A3FE1BF787330089299D /* Debug */,

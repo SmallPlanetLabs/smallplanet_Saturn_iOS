@@ -10,6 +10,12 @@
 		C403A3EA1BF787320089299D /* Saturn.h in Headers */ = {isa = PBXBuildFile; fileRef = C403A3E91BF787320089299D /* Saturn.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C403A3F11BF787330089299D /* Saturn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C403A3E61BF787320089299D /* Saturn.framework */; };
 		C403A3F61BF787330089299D /* SaturnTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C403A3F51BF787330089299D /* SaturnTests.swift */; };
+		C403A4011BF788050089299D /* SaturnObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C403A4001BF788050089299D /* SaturnObject.swift */; };
+		C403A4041BF78D3D0089299D /* AEXML.swift in Sources */ = {isa = PBXBuildFile; fileRef = C403A4031BF78D3D0089299D /* AEXML.swift */; };
+		C403A4071BF78FE60089299D /* String+CGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = C403A4061BF78FE60089299D /* String+CGFloat.swift */; };
+		C449A7691BF791D100B90898 /* CGRect+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = C449A7681BF791D100B90898 /* CGRect+String.swift */; };
+		C449A76B1BF796EE00B90898 /* UIColor+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = C449A76A1BF796EE00B90898 /* UIColor+String.swift */; };
+		C449A76E1BF7A4A600B90898 /* UIView+Saturn.swift in Sources */ = {isa = PBXBuildFile; fileRef = C449A76D1BF7A4A600B90898 /* UIView+Saturn.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +35,12 @@
 		C403A3F01BF787330089299D /* SaturnTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SaturnTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C403A3F51BF787330089299D /* SaturnTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaturnTests.swift; sourceTree = "<group>"; };
 		C403A3F71BF787330089299D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C403A4001BF788050089299D /* SaturnObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaturnObject.swift; sourceTree = "<group>"; };
+		C403A4031BF78D3D0089299D /* AEXML.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AEXML.swift; sourceTree = "<group>"; };
+		C403A4061BF78FE60089299D /* String+CGFloat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+CGFloat.swift"; sourceTree = "<group>"; };
+		C449A7681BF791D100B90898 /* CGRect+String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGRect+String.swift"; sourceTree = "<group>"; };
+		C449A76A1BF796EE00B90898 /* UIColor+String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+String.swift"; sourceTree = "<group>"; };
+		C449A76D1BF7A4A600B90898 /* UIView+Saturn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Saturn.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,8 +83,12 @@
 		C403A3E81BF787320089299D /* Saturn */ = {
 			isa = PBXGroup;
 			children = (
-				C403A3E91BF787320089299D /* Saturn.h */,
 				C403A3EB1BF787320089299D /* Info.plist */,
+				C403A3E91BF787320089299D /* Saturn.h */,
+				C403A4001BF788050089299D /* SaturnObject.swift */,
+				C403A4021BF78D3C0089299D /* ThirdParty */,
+				C403A4051BF78FD70089299D /* TypeExtensions */,
+				C449A76C1BF7A48800B90898 /* UIKitExtensions */,
 			);
 			path = Saturn;
 			sourceTree = "<group>";
@@ -84,6 +100,32 @@
 				C403A3F71BF787330089299D /* Info.plist */,
 			);
 			path = SaturnTests;
+			sourceTree = "<group>";
+		};
+		C403A4021BF78D3C0089299D /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				C403A4031BF78D3D0089299D /* AEXML.swift */,
+			);
+			path = ThirdParty;
+			sourceTree = "<group>";
+		};
+		C403A4051BF78FD70089299D /* TypeExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				C403A4061BF78FE60089299D /* String+CGFloat.swift */,
+				C449A7681BF791D100B90898 /* CGRect+String.swift */,
+				C449A76A1BF796EE00B90898 /* UIColor+String.swift */,
+			);
+			path = TypeExtensions;
+			sourceTree = "<group>";
+		};
+		C449A76C1BF7A48800B90898 /* UIKitExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				C449A76D1BF7A4A600B90898 /* UIView+Saturn.swift */,
+			);
+			path = UIKitExtensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,6 +236,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C449A7691BF791D100B90898 /* CGRect+String.swift in Sources */,
+				C403A4011BF788050089299D /* SaturnObject.swift in Sources */,
+				C403A4041BF78D3D0089299D /* AEXML.swift in Sources */,
+				C403A4071BF78FE60089299D /* String+CGFloat.swift in Sources */,
+				C449A76B1BF796EE00B90898 /* UIColor+String.swift in Sources */,
+				C449A76E1BF7A4A600B90898 /* UIView+Saturn.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +356,7 @@
 		C403A3FB1BF787330089299D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -318,12 +367,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.smallplanet.Saturn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		C403A3FC1BF787330089299D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -376,6 +427,7 @@
 				C403A3FC1BF787330089299D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C403A3FD1BF787330089299D /* Build configuration list for PBXNativeTarget "SaturnTests" */ = {
 			isa = XCConfigurationList;
@@ -384,6 +436,7 @@
 				C403A3FF1BF787330089299D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -10,27 +10,14 @@ import XCTest
 @testable import Saturn
 
 class SaturnTests: XCTestCase {
-    
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-    
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
-    
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock {
-            // Put the code you want to measure the time of here.
-        }
+        
+    func testView() {
+        let x = UIView.readFromString("<UIView id='ohai' backgroundColor='#8000FF' alpha='0.7' frame='10,20,120,80' ><UIView backgroundColor='#FF4466FF' frame='5,5,40,40' alpha='0.9' /></UIView>") as? UIView
+        XCTAssert(x != nil)
+        XCTAssert(x?.subviews.count == 1)
+        XCTAssert(fabs(Float(x!.alpha) - 0.7) < FLT_EPSILON)
+        XCTAssertEqual(x?.backgroundColor?.string, "#8000FFFF")
+        XCTAssertEqual(x?.frame, CGRect(x: 10, y: 20, width: 120, height: 80))
     }
     
 }

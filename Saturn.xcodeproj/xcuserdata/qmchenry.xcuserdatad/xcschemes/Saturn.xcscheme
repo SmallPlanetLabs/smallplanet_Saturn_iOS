@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "C403A3E51BF787320089299D"
-               BuildableName = "Saturn iOS.framework"
+               BuildableName = "Saturn.framework"
                BlueprintName = "Saturn iOS"
                ReferencedContainer = "container:Saturn.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C403A3E51BF787320089299D"
-            BuildableName = "Saturn iOS.framework"
+            BuildableName = "Saturn.framework"
             BlueprintName = "Saturn iOS"
             ReferencedContainer = "container:Saturn.xcodeproj">
          </BuildableReference>
@@ -65,7 +65,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C403A3E51BF787320089299D"
-            BuildableName = "Saturn iOS.framework"
+            BuildableName = "Saturn.framework"
             BlueprintName = "Saturn iOS"
             ReferencedContainer = "container:Saturn.xcodeproj">
          </BuildableReference>
@@ -83,7 +83,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C403A3E51BF787320089299D"
-            BuildableName = "Saturn iOS.framework"
+            BuildableName = "Saturn.framework"
             BlueprintName = "Saturn iOS"
             ReferencedContainer = "container:Saturn.xcodeproj">
          </BuildableReference>

@@ -9,11 +9,11 @@
 import Foundation
 
 extension UIView: SaturnObject {
-    func loadIntoParent(parent: SaturnObject) {
+    public func loadIntoParent(parent: SaturnObject) {
         (parent as? UIView)?.addSubview(self)
     }
     
-    func setAttribute(value: String, forProperty property: String) {
+    public func setAttribute(value: String, forProperty property: String) {
         switch property {
         case "alpha":
             if let value = value.asCGFloat {

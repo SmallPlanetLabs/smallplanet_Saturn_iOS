@@ -4,4 +4,7 @@
    <FileRef
       location = "group:Saturn.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:Examples/SaturnPlayground.playground">
+   </FileRef>
 </Workspace>

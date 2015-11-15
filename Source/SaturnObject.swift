@@ -8,13 +8,13 @@
 
 import Foundation
 
-protocol SaturnObject {
+public protocol SaturnObject {
     func loadIntoParent(parent: SaturnObject)
     func setAttribute(attribute: String, forProperty property: String)
 }
 
 extension SaturnObject {
-    static func readFromString(string: String, prepare: Bool = true) -> SaturnObject? {
+    public static func readFromString(string: String, prepare: Bool = true) -> SaturnObject? {
         if let xmlData = string.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false) {
             do {
                 let xmlDoc = try AEXMLDocument(xmlData: xmlData, processNamespaces: false)
@@ -28,7 +28,7 @@ extension SaturnObject {
         return nil
     }
     
-    static func parseElement(element: AEXMLElement) -> SaturnObject? {
+    public static func parseElement(element: AEXMLElement) -> SaturnObject? {
         if let entityClass = NSClassFromString(element.name) as? NSObject.Type,
             entity = entityClass.init() as? SaturnObject {
             for (attribute, value) in element.attributes {

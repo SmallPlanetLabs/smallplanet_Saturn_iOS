@@ -16,6 +16,8 @@
 		C402B4B11BF7F5CA00FE563B /* UIView+Saturn.swift in Sources */ = {isa = PBXBuildFile; fileRef = C402B4A91BF7F5CA00FE563B /* UIView+Saturn.swift */; };
 		C402B4B71BF7F82700FE563B /* Saturn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C403A3E61BF787320089299D /* Saturn.framework */; };
 		C402B4B81BF7F94D00FE563B /* SaturnTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C402B4B41BF7F5DD00FE563B /* SaturnTests.swift */; };
+		C402B4BB1BF805FA00FE563B /* UILabel+Saturn.swift in Sources */ = {isa = PBXBuildFile; fileRef = C402B4BA1BF805FA00FE563B /* UILabel+Saturn.swift */; };
+		C408ACE01BF80B320077A4C2 /* Bool+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = C408ACDF1BF80B320077A4C2 /* Bool+String.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +41,10 @@
 		C402B4A91BF7F5CA00FE563B /* UIView+Saturn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Saturn.swift"; sourceTree = "<group>"; };
 		C402B4B31BF7F5DD00FE563B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C402B4B41BF7F5DD00FE563B /* SaturnTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaturnTests.swift; sourceTree = "<group>"; };
+		C402B4BA1BF805FA00FE563B /* UILabel+Saturn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Saturn.swift"; sourceTree = "<group>"; };
 		C403A3E61BF787320089299D /* Saturn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Saturn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C403A3F01BF787330089299D /* Saturn iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Saturn iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C408ACDF1BF80B320077A4C2 /* Bool+String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bool+String.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +93,7 @@
 				C402B4A51BF7F5CA00FE563B /* CGRect+String.swift */,
 				C402B4A61BF7F5CA00FE563B /* String+CGFloat.swift */,
 				C402B4A71BF7F5CA00FE563B /* UIColor+String.swift */,
+				C408ACDF1BF80B320077A4C2 /* Bool+String.swift */,
 			);
 			path = TypeExtensions;
 			sourceTree = "<group>";
@@ -97,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				C402B4A91BF7F5CA00FE563B /* UIView+Saturn.swift */,
+				C402B4BA1BF805FA00FE563B /* UILabel+Saturn.swift */,
 			);
 			path = UIKitExtensions;
 			sourceTree = "<group>";
@@ -238,6 +244,8 @@
 			files = (
 				C402B4AE1BF7F5CA00FE563B /* CGRect+String.swift in Sources */,
 				C402B4AF1BF7F5CA00FE563B /* String+CGFloat.swift in Sources */,
+				C408ACE01BF80B320077A4C2 /* Bool+String.swift in Sources */,
+				C402B4BB1BF805FA00FE563B /* UILabel+Saturn.swift in Sources */,
 				C402B4AC1BF7F5CA00FE563B /* SaturnObject.swift in Sources */,
 				C402B4AD1BF7F5CA00FE563B /* AEXML.swift in Sources */,
 				C402B4B01BF7F5CA00FE563B /* UIColor+String.swift in Sources */,

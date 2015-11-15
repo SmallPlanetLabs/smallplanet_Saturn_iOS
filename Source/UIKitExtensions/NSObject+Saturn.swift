@@ -24,6 +24,13 @@ extension NSObject: SaturnObject {
         }
     }
     
+    public func setAttributes(attributes:[String:String]?) {
+        guard let attributes = attributes else { return }
+        for (property, value) in attributes {
+            setAttribute(value, forProperty: property)
+        }
+    }
+    
     public var id: String? {
         get {
             return objc_getAssociatedObject(self, &AssociatedKeys.id) as? String

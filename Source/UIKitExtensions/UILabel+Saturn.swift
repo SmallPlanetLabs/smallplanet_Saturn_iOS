@@ -17,8 +17,12 @@ extension UILabel {
             text = value
         case "textColor":
             textColor = UIColor(stringLiteral: value)
+        case "textAlignment":
+            textAlignment = NSTextAlignment(stringLiteral: value)
         case "enabled":
             enabled = Bool(stringLiteral: value)
+        case "lineBreakMode":
+            lineBreakMode = NSLineBreakMode(stringLiteral: value)
         default: break
         }
     }

@@ -11,7 +11,7 @@ import Foundation
 public protocol SaturnObject {
     func loadIntoParent(parent: AnyObject)
     func setAttribute(attribute: String, forProperty property: String)
-    func objectsWithId(id: String) -> [SaturnObject]
+    func objectsWithId(id: String) -> [AnyObject]
 }
 
 extension SaturnObject {

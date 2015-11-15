@@ -27,4 +27,13 @@ extension UIView {
         default: break
         }
     }
+    
+    override public func objectsWithId(id: String) -> [AnyObject] {
+        var objects = subviews.reduce([]) { $0 + $1.objectsWithId(id) }
+        if id == self.id {
+            objects.append(self)
+        }
+        return objects
+    }
+
 }

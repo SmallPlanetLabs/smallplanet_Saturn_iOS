@@ -18,6 +18,7 @@
 		C402B4B81BF7F94D00FE563B /* SaturnTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C402B4B41BF7F5DD00FE563B /* SaturnTests.swift */; };
 		C402B4BB1BF805FA00FE563B /* UILabel+Saturn.swift in Sources */ = {isa = PBXBuildFile; fileRef = C402B4BA1BF805FA00FE563B /* UILabel+Saturn.swift */; };
 		C408ACE01BF80B320077A4C2 /* Bool+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = C408ACDF1BF80B320077A4C2 /* Bool+String.swift */; };
+		C408ACE21BF81D1E0077A4C2 /* NSObject+Saturn.swift in Sources */ = {isa = PBXBuildFile; fileRef = C408ACE11BF81D1E0077A4C2 /* NSObject+Saturn.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		C403A3E61BF787320089299D /* Saturn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Saturn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C403A3F01BF787330089299D /* Saturn iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Saturn iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C408ACDF1BF80B320077A4C2 /* Bool+String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bool+String.swift"; sourceTree = "<group>"; };
+		C408ACE11BF81D1E0077A4C2 /* NSObject+Saturn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+Saturn.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 			children = (
 				C402B4A91BF7F5CA00FE563B /* UIView+Saturn.swift */,
 				C402B4BA1BF805FA00FE563B /* UILabel+Saturn.swift */,
+				C408ACE11BF81D1E0077A4C2 /* NSObject+Saturn.swift */,
 			);
 			path = UIKitExtensions;
 			sourceTree = "<group>";
@@ -119,8 +122,8 @@
 		C403A3DC1BF787320089299D = {
 			isa = PBXGroup;
 			children = (
-				C402B4B21BF7F5DD00FE563B /* Tests */,
 				C402B49E1BF7F5CA00FE563B /* Source */,
+				C402B4B21BF7F5DD00FE563B /* Tests */,
 				C403A3E71BF787320089299D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -246,6 +249,7 @@
 				C402B4AF1BF7F5CA00FE563B /* String+CGFloat.swift in Sources */,
 				C408ACE01BF80B320077A4C2 /* Bool+String.swift in Sources */,
 				C402B4BB1BF805FA00FE563B /* UILabel+Saturn.swift in Sources */,
+				C408ACE21BF81D1E0077A4C2 /* NSObject+Saturn.swift in Sources */,
 				C402B4AC1BF7F5CA00FE563B /* SaturnObject.swift in Sources */,
 				C402B4AD1BF7F5CA00FE563B /* AEXML.swift in Sources */,
 				C402B4B01BF7F5CA00FE563B /* UIColor+String.swift in Sources */,

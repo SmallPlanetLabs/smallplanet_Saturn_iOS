@@ -27,6 +27,8 @@ extension UIView {
             backgroundColor = UIColor(stringLiteral: value)
         case "clipsToBounds":
             clipsToBounds = Bool(stringLiteral: value)
+        case "contentMode":
+            contentMode = UIViewContentMode(stringLiteral: value)
         default: break
         }
     }

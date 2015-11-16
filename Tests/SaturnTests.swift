@@ -31,19 +31,27 @@ class SaturnTests: XCTestCase {
     
     func testConstraints() {
         let xml =
-        "<UIView id='root' backgroundColor='#ab49e1' frame='100,100,100,200'>" +
-                "<NSLayoutConstraint firstItem='root' firstAttribute='left' secondItem='parent' secondAttribute='left' />" +
-                "<NSLayoutConstraint firstItem='root' firstAttribute='right' secondItem='parent' secondAttribute='right' />" +
-                "<NSLayoutConstraint firstItem='root' firstAttribute='width' secondItem='parent' secondAttribute='width' />" +
-                "<NSLayoutConstraint firstItem='root' firstAttribute='height' secondItem='parent' secondAttribute='height' />" +
+        "<UIView id='root' backgroundColor='#ab49e1' clipsToBounds='false'>" +
+            "<NSLayoutConstraint firstItem='root' firstAttribute='centerX' secondItem='parent' secondAttribute='centerX' />" +
+            "<NSLayoutConstraint firstItem='root' firstAttribute='centerY' secondItem='parent' secondAttribute='centerY' constant='-50' />" +
+            "<NSLayoutConstraint firstItem='root' firstAttribute='width' secondItem='parent' secondAttribute='width' multiplier='0.5' />" +
+            "<NSLayoutConstraint firstItem='root' firstAttribute='height' secondItem='parent' secondAttribute='height' multiplier='0.5' />" +
             "<UILabel id='label1' text='Ohai!' enabled='true' textColor='white' textAlignment='center'/>" +
-            "<NSLayoutConstraint firstItem='label1' firstAttribute='centerX' secondItem='root' secondAttribute='centerX'/>" +
-            "<NSLayoutConstraint firstItem='label1' firstAttribute='bottom' secondItem='root' secondAttribute='bottom'/>" +
+            "<NSLayoutConstraint firstItem='label1' firstAttribute='centerX' secondItem='root' secondAttribute='centerX' constant='0'/>" +
+            "<NSLayoutConstraint firstItem='label1' firstAttribute='centerY' secondItem='root' secondAttribute='centerY' constant='-30'/>" +
         "</UIView>"
         
         let hostView = UIView(frame: CGRect(x: 0, y: 0, width: 240, height: 380))
-        let view = UIView.readFromString(xml, intoParent: hostView)
-        XCTAssert(view != nil)
+        XCTAssertEqual(hostView.constraints.count, 0)
         
+        let view = UIView.readFromString(xml, intoParent: hostView) as? UIView
+        XCTAssertEqual(hostView.constraints.count, 4) // four constraints in root's parent
+        XCTAssert(view != nil)
+        XCTAssertEqual(view?.subviews.count, 1)
+        XCTAssertEqual(view?.constraints.count, 2) // two constraints from label1 in root
+        
+        let label1 = view?.objectsWithId("label1").first as? UILabel
+        XCTAssert(label1 != nil)
+        XCTAssertEqual(label1?.constraints.count, 0) // none of the constraints end up here
     }
 }

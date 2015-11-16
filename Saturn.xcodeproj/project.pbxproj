@@ -21,6 +21,8 @@
 		C408ACE21BF81D1E0077A4C2 /* NSObject+Saturn.swift in Sources */ = {isa = PBXBuildFile; fileRef = C408ACE11BF81D1E0077A4C2 /* NSObject+Saturn.swift */; };
 		C408ACE41BF86A7E0077A4C2 /* NSText+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = C408ACE31BF86A7E0077A4C2 /* NSText+String.swift */; };
 		C408ACE61BF86CF00077A4C2 /* NSParagraphStyle+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = C408ACE51BF86CF00077A4C2 /* NSParagraphStyle+String.swift */; };
+		C408ACE81BF8DA9D0077A4C2 /* NSLayoutConstraint+Saturn.swift in Sources */ = {isa = PBXBuildFile; fileRef = C408ACE71BF8DA9D0077A4C2 /* NSLayoutConstraint+Saturn.swift */; };
+		C408ACEA1BF8E93F0077A4C2 /* NSLayoutConstraint+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = C408ACE91BF8E93F0077A4C2 /* NSLayoutConstraint+String.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		C408ACE11BF81D1E0077A4C2 /* NSObject+Saturn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+Saturn.swift"; sourceTree = "<group>"; };
 		C408ACE31BF86A7E0077A4C2 /* NSText+String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSText+String.swift"; sourceTree = "<group>"; };
 		C408ACE51BF86CF00077A4C2 /* NSParagraphStyle+String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSParagraphStyle+String.swift"; sourceTree = "<group>"; };
+		C408ACE71BF8DA9D0077A4C2 /* NSLayoutConstraint+Saturn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+Saturn.swift"; sourceTree = "<group>"; };
+		C408ACE91BF8E93F0077A4C2 /* NSLayoutConstraint+String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+String.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,7 @@
 				C408ACE31BF86A7E0077A4C2 /* NSText+String.swift */,
 				C402B4A61BF7F5CA00FE563B /* String+CGFloat.swift */,
 				C402B4A71BF7F5CA00FE563B /* UIColor+String.swift */,
+				C408ACE91BF8E93F0077A4C2 /* NSLayoutConstraint+String.swift */,
 			);
 			path = TypeExtensions;
 			sourceTree = "<group>";
@@ -112,6 +117,7 @@
 				C408ACE11BF81D1E0077A4C2 /* NSObject+Saturn.swift */,
 				C402B4BA1BF805FA00FE563B /* UILabel+Saturn.swift */,
 				C402B4A91BF7F5CA00FE563B /* UIView+Saturn.swift */,
+				C408ACE71BF8DA9D0077A4C2 /* NSLayoutConstraint+Saturn.swift */,
 			);
 			path = UIKitExtensions;
 			sourceTree = "<group>";
@@ -253,8 +259,10 @@
 			files = (
 				C402B4AE1BF7F5CA00FE563B /* CGRect+String.swift in Sources */,
 				C402B4AF1BF7F5CA00FE563B /* String+CGFloat.swift in Sources */,
+				C408ACE81BF8DA9D0077A4C2 /* NSLayoutConstraint+Saturn.swift in Sources */,
 				C408ACE41BF86A7E0077A4C2 /* NSText+String.swift in Sources */,
 				C408ACE01BF80B320077A4C2 /* Bool+String.swift in Sources */,
+				C408ACEA1BF8E93F0077A4C2 /* NSLayoutConstraint+String.swift in Sources */,
 				C402B4BB1BF805FA00FE563B /* UILabel+Saturn.swift in Sources */,
 				C408ACE21BF81D1E0077A4C2 /* NSObject+Saturn.swift in Sources */,
 				C402B4AC1BF7F5CA00FE563B /* SaturnObject.swift in Sources */,

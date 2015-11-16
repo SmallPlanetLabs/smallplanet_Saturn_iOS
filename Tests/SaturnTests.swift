@@ -29,4 +29,21 @@ class SaturnTests: XCTestCase {
         XCTAssertEqual(x!.objectsWithId("Rhea").count, 3)
     }
     
+    func testConstraints() {
+        let xml =
+        "<UIView id='root' backgroundColor='#ab49e1' frame='100,100,100,200'>" +
+                "<NSLayoutConstraint firstItem='root' firstAttribute='left' secondItem='parent' secondAttribute='left' />" +
+                "<NSLayoutConstraint firstItem='root' firstAttribute='right' secondItem='parent' secondAttribute='right' />" +
+                "<NSLayoutConstraint firstItem='root' firstAttribute='width' secondItem='parent' secondAttribute='width' />" +
+                "<NSLayoutConstraint firstItem='root' firstAttribute='height' secondItem='parent' secondAttribute='height' />" +
+            "<UILabel id='label1' text='Ohai!' enabled='true' textColor='white' textAlignment='center'/>" +
+            "<NSLayoutConstraint firstItem='label1' firstAttribute='centerX' secondItem='root' secondAttribute='centerX'/>" +
+            "<NSLayoutConstraint firstItem='label1' firstAttribute='bottom' secondItem='root' secondAttribute='bottom'/>" +
+        "</UIView>"
+        
+        let hostView = UIView(frame: CGRect(x: 0, y: 0, width: 240, height: 380))
+        let view = UIView.readFromString(xml, intoParent: hostView)
+        XCTAssert(view != nil)
+        
+    }
 }

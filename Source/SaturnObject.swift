@@ -16,31 +16,30 @@ public protocol SaturnObject {
 }
 
 extension SaturnObject {
-    public static func readFromString(string: String, prepare: Bool = true) -> SaturnObject? {
-        if let xmlData = string.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false) {
-            do {
-                let xmlDoc = try AEXMLDocument(xmlData: xmlData, processNamespaces: false)
-                if let parsedElement = parseElement(xmlDoc.root) {
-                    return parsedElement
-                }
-            } catch {
-                return nil
-            }
-        }
-        return nil
+    public static func readFromString(string: String, prepare: Bool = true, intoParent parent: AnyObject? = nil) -> SaturnObject? {
+        guard let xmlData = string.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false) else { return nil }
+        let xmlDoc = try? AEXMLDocument(xmlData: xmlData, processNamespaces: false)
+        return parseElement(xmlDoc?.root, intoParent: parent)
     }
     
-    public static func parseElement(element: AEXMLElement) -> SaturnObject? {
-        if let entityClass = NSClassFromString(element.name) as? NSObject.Type {
-            let entity = entityClass.init()
-            entity.setAttributes(element.attributes as? [String:String])
-            element.children.forEach { child in
-                if let subEntity = parseElement(child) {
-                    subEntity.loadIntoParent(entity)
-                }
-            }
-            return entity
+    public static func parseElement(element: AEXMLElement?, intoParent parent: AnyObject? = nil) -> SaturnObject? {
+        guard let element = element, entityClass = NSClassFromString(element.name) as? NSObject.Type else { return nil }
+        let entity = entityClass.init()
+        entity.setAttributes(element.attributes as? [String:String])
+        if let parent = parent {
+            entity.loadIntoParent(parent)
         }
-        return nil
+        element.children.forEach { child in
+            parseElement(child, intoParent: entity)
+        }
+        return entity
     }
+}
+
+// styles handled by reading an xml file with style definitions and storing the attribute dictionaries in a ditionary keyed by the styleId
+// config dictionary read from plist, handled in parseElement, replacing keys with values before setAttributes
+
+struct Saturn {
+    static private var styles: [String : [String:String]]?
+    static private var config: [String : AnyObject]?
 }

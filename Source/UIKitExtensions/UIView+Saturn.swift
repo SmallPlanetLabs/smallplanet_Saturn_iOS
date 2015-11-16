@@ -9,6 +9,7 @@
 import Foundation
 
 extension UIView {
+    
     public override func loadIntoParent(parent: AnyObject) {
         (parent as? UIView)?.addSubview(self)
     }
@@ -24,6 +25,8 @@ extension UIView {
             frame = CGRect(stringLiteral: value)
         case "backgroundColor":
             backgroundColor = UIColor(stringLiteral: value)
+        case "clipsToBounds":
+            clipsToBounds = Bool(stringLiteral: value)
         default: break
         }
     }

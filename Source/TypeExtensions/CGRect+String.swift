@@ -6,8 +6,6 @@
 //  Copyright © 2015 Small Planet. All rights reserved.
 //
 
-import Foundation
-
 extension CGRect: StringLiteralConvertible {
     public typealias ExtendedGraphemeClusterLiteralType = StringLiteralType
     public typealias UnicodeScalarLiteralType = Character

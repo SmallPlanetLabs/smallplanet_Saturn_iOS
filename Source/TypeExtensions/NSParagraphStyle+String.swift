@@ -6,8 +6,6 @@
 //  Copyright © 2015 Small Planet. All rights reserved.
 //
 
-import Foundation
-
 extension NSLineBreakMode: StringLiteralConvertible {
     public typealias ExtendedGraphemeClusterLiteralType = StringLiteralType
     public typealias UnicodeScalarLiteralType = Character

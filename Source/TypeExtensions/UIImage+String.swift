@@ -6,8 +6,6 @@
 //  Copyright © 2015 Small Planet. All rights reserved.
 //
 
-import Foundation
-
 extension UIImage {
     
     public convenience init?(stringLiteral value: String) {

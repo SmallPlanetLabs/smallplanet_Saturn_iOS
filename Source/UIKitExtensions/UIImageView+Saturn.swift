@@ -6,8 +6,6 @@
 //  Copyright © 2015 Small Planet. All rights reserved.
 //
 
-import Foundation
-
 extension UIImageView {
     override public func setAttribute(value: String, forProperty property: String) {
         super.setAttribute(value, forProperty: property)

@@ -6,8 +6,6 @@
 //  Copyright © 2015 Small Planet. All rights reserved.
 //
 
-import Foundation
-
 public protocol SaturnObject {
     func loadIntoParent(parent: AnyObject)
     mutating func setAttribute(attribute: String, forProperty property: String)

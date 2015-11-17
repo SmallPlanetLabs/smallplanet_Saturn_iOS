@@ -44,5 +44,3 @@ hostView.backgroundColor = .whiteColor()
 let view = UIView.readFromString(xml, intoParent: hostView)
 
 XCPlaygroundPage.currentPage.liveView = hostView
-
-

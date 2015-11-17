@@ -6,8 +6,6 @@
 //  Copyright © 2015 Small Planet. All rights reserved.
 //
 
-import Foundation
-
 @objc public class UIButtonState : NSObject {
     var state: String?
     var image: String?

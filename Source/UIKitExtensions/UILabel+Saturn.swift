@@ -6,8 +6,6 @@
 //  Copyright © 2015 Small Planet. All rights reserved.
 //
 
-import UIKit
-
 // overriding SaturnObject protocol conformance
 extension UILabel {
     override public func setAttribute(value: String, forProperty property: String) {

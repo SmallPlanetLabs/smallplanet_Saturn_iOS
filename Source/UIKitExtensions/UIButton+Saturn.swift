@@ -6,8 +6,6 @@
 //  Copyright © 2015 Small Planet. All rights reserved.
 //
 
-import Foundation
-
 extension UIButton {
     override public func setAttribute(value: String, forProperty property: String) {
         super.setAttribute(value, forProperty: property)

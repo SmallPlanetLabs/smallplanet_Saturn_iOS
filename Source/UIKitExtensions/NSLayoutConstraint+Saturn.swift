@@ -47,7 +47,7 @@ extension NSLayoutConstraint {
 
     func item(withId id: String?, inEntity entity: AnyObject) -> UIView? {
         guard let id = id, entity = entity as? SaturnObject else { return nil }
-        return entity.objectsWithId(id).last as? UIView
+        return ((entity as? UIView)?.superview ?? entity).objectsWithId(id).last as? UIView
     }
     
     func firstItem(inEntity entity: AnyObject) -> UIView? {

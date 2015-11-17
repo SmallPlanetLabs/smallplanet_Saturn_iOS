@@ -10,8 +10,8 @@ import Foundation
 
 public protocol SaturnObject {
     func loadIntoParent(parent: AnyObject)
-    func setAttribute(attribute: String, forProperty property: String)
-    func setAttributes(attributes:[String:String]?)
+    mutating func setAttribute(attribute: String, forProperty property: String)
+    mutating func setAttributes(attributes:[String:String]?)
     func objectsWithId(id: String) -> [AnyObject]
 }
 
@@ -23,7 +23,8 @@ extension SaturnObject {
     }
     
     public static func parseElement(element: AEXMLElement?, intoParent parent: AnyObject? = nil) -> SaturnObject? {
-        guard let element = element, entityClass = NSClassFromString(element.name) as? NSObject.Type else { return nil }
+        guard let element = element, entityClass = classFromElement(element) else { return nil }
+        
         let entity = entityClass.init()
         entity.setAttributes(element.attributes as? [String:String])
         if let parent = parent {
@@ -34,6 +35,12 @@ extension SaturnObject {
         }
         return entity
     }
+
+    private static func classFromElement(element: AEXMLElement) -> NSObject.Type? {
+        return (NSClassFromString(element.name) as? NSObject.Type) ??
+            (NSClassFromString("Saturn.\(element.name)") as? NSObject.Type)
+    }
+    
 }
 
 // styles handled by reading an xml file with style definitions and storing the attribute dictionaries in a ditionary keyed by the styleId

@@ -26,22 +26,27 @@ extension NSLayoutConstraint {
     }
 
     public override func loadIntoParent(parent: AnyObject) {
-        guard let attributes = attributes, firstItem = firstItem(inEntity: parent) else { return }
+        guard let attributes = attributes, first = firstItem(inEntity: parent) else { return }
         let second = secondItem(inEntity: parent)
-        let constraint = NSLayoutConstraint(item: firstItem,
-            attribute: NSLayoutAttribute(stringLiteral: attributes["firstAttribute"] ?? ""),
-            relatedBy: NSLayoutRelation(stringLiteral: attributes["relation"] ?? ""),
-            toItem: second,
-            attribute: NSLayoutAttribute(stringLiteral: attributes["secondAttribute"] ?? ""),
-            multiplier: attributes["multiplier"]?.asCGFloat ?? 1,
-            constant: attributes["constant"]?.asCGFloat ?? 0)
-        let constraintView = second != nil && firstItem.isDescendantOfView(second!) ? second! : firstItem
-        constraintView.addConstraint(constraint)
-        if firstItem.superview != nil {
-            firstItem.translatesAutoresizingMaskIntoConstraints = false
+        
+        let constraints = makeConstraints(first, second: second)
+        if let priority = attributes["priority"]?.asCGFloat {
+            constraints.forEach { $0.priority = UILayoutPriority(priority) }
         }
-        if let secondItem = constraint.secondItem as? UIView where secondItem.superview != nil {
-            secondItem.translatesAutoresizingMaskIntoConstraints = false
+        
+        let constraintView: UIView
+        if let constraint = constraints.first, second = constraint.secondItem as? UIView where constraint.firstItem.isDescendantOfView(second) {
+            constraintView = second
+        } else {
+            constraintView = constraints.first?.firstItem as? UIView ?? first.superview ?? first
+        }
+        constraintView.addConstraints(constraints)
+        
+        if first.superview != nil {
+            first.translatesAutoresizingMaskIntoConstraints = false
+        }
+        if let second = second where second.superview != nil {
+            second.translatesAutoresizingMaskIntoConstraints = false
         }
     }
 
@@ -66,4 +71,38 @@ extension NSLayoutConstraint {
         return item(withId: secondItemId, inEntity: entity)
     }
     
+    private var ruleSet: String {
+        return attributes?["ruleSet"] ?? ""
+    }
+    
+    public func makeConstraints(first: UIView, second: UIView?) -> [NSLayoutConstraint] {
+        guard let attributes = attributes else { return [] }
+        switch ruleSet.lowercaseString {
+        case "fillsuperview":
+            let superview = first.superview
+            return [NSLayoutConstraint(item: first, toItem: superview, equalAttribute: .Top),
+                NSLayoutConstraint(item: first, toItem: superview, equalAttribute: .Right),
+                NSLayoutConstraint(item: first, toItem: superview, equalAttribute: .Bottom),
+                NSLayoutConstraint(item: first, toItem: superview, equalAttribute: .Left)]
+        case "equalsize":
+            return [NSLayoutConstraint(item: first, toItem: second, equalAttribute: .Width),
+                NSLayoutConstraint(item: first, toItem: second, equalAttribute: .Height)]
+        default:
+            return [NSLayoutConstraint(item: first,
+                attribute: NSLayoutAttribute(stringLiteral: attributes["firstAttribute"] ?? ""),
+                relatedBy: NSLayoutRelation(stringLiteral: attributes["relation"] ?? ""),
+                toItem: second,
+                attribute: NSLayoutAttribute(stringLiteral: attributes["secondAttribute"] ?? ""),
+                multiplier: attributes["multiplier"]?.asCGFloat ?? 1,
+                constant: attributes["constant"]?.asCGFloat ?? 0)
+            ]
+        }
+    }
+    
+}
+
+extension NSLayoutConstraint {
+    public convenience init(item: UIView, toItem: UIView?, equalAttribute attribute: NSLayoutAttribute) {
+        self.init(item: item, attribute: attribute, relatedBy:.Equal, toItem:toItem, attribute: attribute, multiplier: 1, constant: 0)
+    }
 }

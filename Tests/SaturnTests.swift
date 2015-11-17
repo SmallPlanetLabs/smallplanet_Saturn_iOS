@@ -55,4 +55,30 @@ class SaturnTests: XCTestCase {
         XCTAssert(label1 != nil)
         XCTAssertEqual(label1?.constraints.count, 0) // none of the constraints end up here
     }
+
+    func testConstraintsRulesets() {
+        let xml =
+        "<UIView id='root' backgroundColor='#ab49e1' clipsToBounds='false'>" +
+            "<NSLayoutConstraint firstItem='root' ruleSet='fillSuperview' />" +
+            "<UILabel id='label1' text='Ohai!' enabled='true' textColor='white' textAlignment='center'>" +
+            "<NSLayoutConstraint firstItem='label1' firstAttribute='centerX' secondItem='root' secondAttribute='centerX' constant='0'/>" +
+            "<NSLayoutConstraint firstItem='label1' firstAttribute='centerY' secondItem='root' secondAttribute='centerY' constant='-30'/>" +
+            "</UILabel>" +
+            "<UIView id='view2' backgroundColor='#0000FF88' />" +
+            "<NSLayoutConstraint ruleSet='equalSize' firstItem='view2' secondItem='label1' />" +
+        "</UIView>"
+        
+        let hostView = UIView(frame: CGRect(x: 0, y: 0, width: 240, height: 380))
+        XCTAssertEqual(hostView.constraints.count, 0)
+        
+        let view = UIView.readFromString(xml, intoParent: hostView) as? UIView
+        XCTAssertEqual(hostView.constraints.count, 4) // four constraints in root's parent
+        XCTAssert(view != nil)
+        XCTAssertEqual(view?.subviews.count, 2)
+        XCTAssertEqual(view?.constraints.count, 2) // two constraints from label1 in root
+        
+        let label1 = view?.objectsWithId("label1").first as? UILabel
+        XCTAssert(label1 != nil)
+        XCTAssertEqual(label1?.constraints.count, 0) // none of the constraints end up here
+    }
 }

@@ -11,10 +11,13 @@ let xml =
     "<NSLayoutConstraint firstItem='root' firstAttribute='width' secondItem='parent' secondAttribute='width' multiplier='0.5' />" +
     "<NSLayoutConstraint firstItem='root' firstAttribute='height' secondItem='parent' secondAttribute='height' multiplier='0.5' />" +
     "<UILabel id='label1' text='Ohai!' enabled='true' textColor='white' textAlignment='center'>" +
-    "<NSLayoutConstraint firstItem='label1' firstAttribute='centerX' secondItem='parent' secondAttribute='centerX' constant='0'/>" +
-    "<NSLayoutConstraint firstItem='label1' firstAttribute='centerY' secondItem='parent' secondAttribute='centerY' constant='-30'/>" +
+        "<NSLayoutConstraint firstItem='label1' firstAttribute='centerX' secondItem='parent' secondAttribute='centerX' constant='0'/>" +
+        "<NSLayoutConstraint firstItem='label1' firstAttribute='centerY' secondItem='parent' secondAttribute='centerY' constant='-30'/>" +
     "</UILabel>" +
-    "<UIImageView id='image1' image='logo.png' contentMode='ScaleAspectFit'/>" +
+    "<UIImageView id='image1' image='logo.png' contentMode='ScaleAspectFit'>" +
+    "<UIView id='view2' backgroundColor='#00000022' />" +
+    "<NSLayoutConstraint ruleSet='fillSuperview' firstItem='view2' />" +
+    "</UIImageView>" +
     "<NSLayoutConstraint firstItem='image1' firstAttribute='centerX' secondItem='parent' secondAttribute='centerX' constant='0'/>" +
     "<NSLayoutConstraint firstItem='image1' firstAttribute='centerY' secondItem='parent' secondAttribute='centerY' constant='40'/>" +
     "<NSLayoutConstraint firstItem='image1' firstAttribute='width' secondItem='parent' secondAttribute='width' multiplier='0.5' />" +

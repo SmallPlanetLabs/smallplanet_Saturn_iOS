@@ -10,29 +10,34 @@ extension UIControlState : StringLiteralConvertible {
     public typealias ExtendedGraphemeClusterLiteralType = StringLiteralType
     public typealias UnicodeScalarLiteralType = Character
     
+    // Provides bitwise OptionSetType functionality such that "highlighted,selected" is
+    // equivalent to [.Highlighted, .Selected]
     public init(stringLiteral value: String) {
-        switch value.lowercaseString {
-        case "normal":
-            self.init(rawValue: UIControlState.Normal.rawValue)
-        case "highlighted":
-            self.init(rawValue: UIControlState.Highlighted.rawValue)
-        case "disabled":
-            self.init(rawValue: UIControlState.Disabled.rawValue)
-        case "selected":
-            self.init(rawValue: UIControlState.Selected.rawValue)
-        case "application":
-            self.init(rawValue: UIControlState.Application.rawValue)
-        case "reserved":
-            self.init(rawValue: UIControlState.Reserved.rawValue)
-        case "focused":
-            if #available(iOS 9.0, *) {
-                self.init(rawValue: UIControlState.Focused.rawValue)
-            } else {
-                self.init(rawValue: UIControlState.Normal.rawValue)
+        func stateForString(value: String) -> UIControlState {
+            switch value.lowercaseString {
+            case "normal":
+                return .Normal
+            case "highlighted":
+                return .Highlighted
+            case "disabled":
+                return .Disabled
+            case "selected":
+                return .Selected
+            case "application":
+                return .Application
+            case "reserved":
+                return .Reserved
+            case "focused":
+                if #available(iOS 9.0, *) {
+                    return .Focused
+                }
+            default: break
             }
-        default:
-            self.init(rawValue: UIControlState.Normal.rawValue)
+            return .Normal
         }
+
+        let state = value.componentsSeparatedByString(",").reduce(UIControlState()) { $0.union(stateForString($1)) }
+        self.init(rawValue: state.rawValue)
     }
     
     public init(extendedGraphemeClusterLiteral value: ExtendedGraphemeClusterLiteralType) {
@@ -42,5 +47,5 @@ extension UIControlState : StringLiteralConvertible {
     public init(unicodeScalarLiteral value: UnicodeScalarLiteralType) {
         self.init(stringLiteral: "\(value)")
     }
-
+    
 }

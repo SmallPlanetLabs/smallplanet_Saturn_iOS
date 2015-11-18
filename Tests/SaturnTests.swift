@@ -95,6 +95,7 @@ class SaturnTests: XCTestCase {
             "<NSLayoutConstraint firstItem='root' ruleSet='fillSuperview' />" +
             "<UIButton id='button1' backgroundColor='#6666BBFF'>" +
                 "<UIButtonState state='normal' title='Click me!'/>" +
+                "<UIButtonState state='selected,highlighted' title='S,H'/>" +
                 "<NSLayoutConstraint firstItem='button1' firstAttribute='centerX' secondItem='parent' secondAttribute='centerX' constant='0'/>" +
                 "<NSLayoutConstraint firstItem='button1' firstAttribute='centerY' secondItem='parent' secondAttribute='centerY' constant='30'/>" +
                 "<NSLayoutConstraint firstItem='button1' firstAttribute='width' constant='100'/>" +
@@ -114,6 +115,6 @@ class SaturnTests: XCTestCase {
         let button = view?.objectsWithId("button1").first as? UIButton
         XCTAssert(button != nil)
         XCTAssertEqual(button?.titleForState(.Normal), "Click me!")
-        
+        XCTAssertEqual(button?.titleForState([.Selected, .Highlighted]), "S,H")
     }
 }

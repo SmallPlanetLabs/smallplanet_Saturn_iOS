@@ -13,6 +13,7 @@
 		A9A527E71BFA9368005B43C3 /* UIButtonState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A527E61BFA9368005B43C3 /* UIButtonState.swift */; };
 		A9A527E91BFB8136005B43C3 /* UIControl+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A527E81BFB8136005B43C3 /* UIControl+String.swift */; };
 		A9A527EB1BFB8FE2005B43C3 /* UIButton+Saturn.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A527EA1BFB8FE2005B43C3 /* UIButton+Saturn.swift */; };
+		A9A527ED1BFD2889005B43C3 /* UIControl+Saturn.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A527EC1BFD2889005B43C3 /* UIControl+Saturn.swift */; };
 		C402B4AB1BF7F5CA00FE563B /* Saturn.h in Headers */ = {isa = PBXBuildFile; fileRef = C402B4A01BF7F5CA00FE563B /* Saturn.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C402B4AC1BF7F5CA00FE563B /* SaturnObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C402B4A11BF7F5CA00FE563B /* SaturnObject.swift */; };
 		C402B4AD1BF7F5CA00FE563B /* AEXML.swift in Sources */ = {isa = PBXBuildFile; fileRef = C402B4A31BF7F5CA00FE563B /* AEXML.swift */; };
@@ -48,6 +49,7 @@
 		A9A527E61BFA9368005B43C3 /* UIButtonState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonState.swift; sourceTree = "<group>"; };
 		A9A527E81BFB8136005B43C3 /* UIControl+String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIControl+String.swift"; sourceTree = "<group>"; };
 		A9A527EA1BFB8FE2005B43C3 /* UIButton+Saturn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Saturn.swift"; sourceTree = "<group>"; };
+		A9A527EC1BFD2889005B43C3 /* UIControl+Saturn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIControl+Saturn.swift"; sourceTree = "<group>"; };
 		C402B49F1BF7F5CA00FE563B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C402B4A01BF7F5CA00FE563B /* Saturn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Saturn.h; sourceTree = "<group>"; };
 		C402B4A11BF7F5CA00FE563B /* SaturnObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaturnObject.swift; sourceTree = "<group>"; };
@@ -114,14 +116,14 @@
 			children = (
 				C408ACDF1BF80B320077A4C2 /* Bool+String.swift */,
 				C402B4A51BF7F5CA00FE563B /* CGRect+String.swift */,
+				C408ACE91BF8E93F0077A4C2 /* NSLayoutConstraint+String.swift */,
 				C408ACE51BF86CF00077A4C2 /* NSParagraphStyle+String.swift */,
 				C408ACE31BF86A7E0077A4C2 /* NSText+String.swift */,
 				C402B4A61BF7F5CA00FE563B /* String+CGFloat.swift */,
 				C402B4A71BF7F5CA00FE563B /* UIColor+String.swift */,
-				C408ACE91BF8E93F0077A4C2 /* NSLayoutConstraint+String.swift */,
+				A9A527E81BFB8136005B43C3 /* UIControl+String.swift */,
 				A9A527E21BFA77C5005B43C3 /* UIImage+String.swift */,
 				A9A527E41BFA7B66005B43C3 /* UIView+String.swift */,
-				A9A527E81BFB8136005B43C3 /* UIControl+String.swift */,
 			);
 			path = TypeExtensions;
 			sourceTree = "<group>";
@@ -131,8 +133,9 @@
 			children = (
 				C408ACE71BF8DA9D0077A4C2 /* NSLayoutConstraint+Saturn.swift */,
 				C408ACE11BF81D1E0077A4C2 /* NSObject+Saturn.swift */,
-				A9A527E61BFA9368005B43C3 /* UIButtonState.swift */,
 				A9A527EA1BFB8FE2005B43C3 /* UIButton+Saturn.swift */,
+				A9A527E61BFA9368005B43C3 /* UIButtonState.swift */,
+				A9A527EC1BFD2889005B43C3 /* UIControl+Saturn.swift */,
 				A9A527E01BFA6DEF005B43C3 /* UIImageView+Saturn.swift */,
 				C402B4BA1BF805FA00FE563B /* UILabel+Saturn.swift */,
 				C402B4A91BF7F5CA00FE563B /* UIView+Saturn.swift */,
@@ -291,6 +294,7 @@
 				C402B4AC1BF7F5CA00FE563B /* SaturnObject.swift in Sources */,
 				C408ACE61BF86CF00077A4C2 /* NSParagraphStyle+String.swift in Sources */,
 				C402B4AD1BF7F5CA00FE563B /* AEXML.swift in Sources */,
+				A9A527ED1BFD2889005B43C3 /* UIControl+Saturn.swift in Sources */,
 				C402B4B01BF7F5CA00FE563B /* UIColor+String.swift in Sources */,
 				A9A527E31BFA77C5005B43C3 /* UIImage+String.swift in Sources */,
 				C402B4B11BF7F5CA00FE563B /* UIView+Saturn.swift in Sources */,

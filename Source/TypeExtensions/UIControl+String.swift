@@ -49,3 +49,59 @@ extension UIControlState : StringLiteralConvertible {
     }
     
 }
+
+
+extension UIControlContentVerticalAlignment : StringLiteralConvertible {
+    public typealias ExtendedGraphemeClusterLiteralType = StringLiteralType
+    public typealias UnicodeScalarLiteralType = Character
+    
+    public init(stringLiteral value: String) {
+        switch value.lowercaseString {
+        case "fill":
+            self = Fill
+        case "top":
+            self = Top
+        case "bottom":
+            self = Bottom
+        default:
+            self = Center
+        }
+    }
+    
+    public init(extendedGraphemeClusterLiteral value: ExtendedGraphemeClusterLiteralType) {
+        self.init(stringLiteral: value)
+    }
+    
+    public init(unicodeScalarLiteral value: UnicodeScalarLiteralType) {
+        self.init(stringLiteral: "\(value)")
+    }
+    
+}
+
+
+extension UIControlContentHorizontalAlignment : StringLiteralConvertible {
+    public typealias ExtendedGraphemeClusterLiteralType = StringLiteralType
+    public typealias UnicodeScalarLiteralType = Character
+    
+    public init(stringLiteral value: String) {
+        switch value.lowercaseString {
+        case "fill":
+            self = Fill
+        case "left":
+            self = Left
+        case "right":
+            self = Right
+        default:
+            self = Center
+        }
+    }
+    
+    public init(extendedGraphemeClusterLiteral value: ExtendedGraphemeClusterLiteralType) {
+        self.init(stringLiteral: value)
+    }
+    
+    public init(unicodeScalarLiteral value: UnicodeScalarLiteralType) {
+        self.init(stringLiteral: "\(value)")
+    }
+    
+}

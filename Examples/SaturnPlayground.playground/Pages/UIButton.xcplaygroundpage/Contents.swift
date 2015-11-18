@@ -19,13 +19,15 @@ let xml =
     "<NSLayoutConstraint firstItem='label1' firstAttribute='centerX' secondItem='parent' secondAttribute='centerX' constant='0'/>" +
     "<NSLayoutConstraint firstItem='label1' firstAttribute='centerY' secondItem='parent' secondAttribute='top' constant='30'/>" +
     "</UILabel>" +
-    "<UIButton id='button1' backgroundColor='#6666BBFF' highlighted='true' selected='true'>" +
+    "<UIButton id='button1' backgroundColor='#6666BBFF' contentVerticalAlignment='top' contentHorizontalAlignment='center' highlighted='true' selected='true'>" +
         "<UIButtonState state='normal' title='Normal'/>" +
         "<UIButtonState state='highlighted' title='Highlighted'/>" +
         "<UIButtonState state='selected' title='Selected'/>" +
         "<UIButtonState state='selected,highlighted' title='Selected &amp; Highlighted'/>" +
         "<NSLayoutConstraint firstItem='button1' firstAttribute='centerX' secondItem='parent' secondAttribute='centerX' constant='0'/>" +
         "<NSLayoutConstraint firstItem='button1' firstAttribute='centerY' secondItem='parent' secondAttribute='centerY' constant='30'/>" +
+        "<NSLayoutConstraint firstItem='button1' firstAttribute='height' constant='80'/>" +
+        "<NSLayoutConstraint firstItem='button1' firstAttribute='width' constant='250'/>" +
     "</UIButton>" +
     "<UIButton id='button2' backgroundColor='#6666BBFF' highlighted='false' selected='false'>" +
         "<UIButtonState state='normal' image='logo_sm.png'/>" +

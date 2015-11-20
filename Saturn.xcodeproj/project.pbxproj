@@ -30,6 +30,10 @@
 		C408ACE61BF86CF00077A4C2 /* NSParagraphStyle+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = C408ACE51BF86CF00077A4C2 /* NSParagraphStyle+String.swift */; };
 		C408ACE81BF8DA9D0077A4C2 /* NSLayoutConstraint+Saturn.swift in Sources */ = {isa = PBXBuildFile; fileRef = C408ACE71BF8DA9D0077A4C2 /* NSLayoutConstraint+Saturn.swift */; };
 		C408ACEA1BF8E93F0077A4C2 /* NSLayoutConstraint+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = C408ACE91BF8E93F0077A4C2 /* NSLayoutConstraint+String.swift */; };
+		EE33D2361BFF7E1F00EBE30B /* UITextField+Saturn.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE33D2351BFF7E1F00EBE30B /* UITextField+Saturn.swift */; };
+		EE33D2381BFF7E7600EBE30B /* UIScrollView+Saturn.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE33D2371BFF7E7600EBE30B /* UIScrollView+Saturn.swift */; };
+		EE33D23A1BFF85C500EBE30B /* CGSize+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE33D2391BFF85C500EBE30B /* CGSize+String.swift */; };
+		EE33D23C1BFFA31800EBE30B /* CGPoint+string.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE33D23B1BFFA31800EBE30B /* CGPoint+string.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +73,10 @@
 		C408ACE51BF86CF00077A4C2 /* NSParagraphStyle+String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSParagraphStyle+String.swift"; sourceTree = "<group>"; };
 		C408ACE71BF8DA9D0077A4C2 /* NSLayoutConstraint+Saturn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+Saturn.swift"; sourceTree = "<group>"; };
 		C408ACE91BF8E93F0077A4C2 /* NSLayoutConstraint+String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+String.swift"; sourceTree = "<group>"; };
+		EE33D2351BFF7E1F00EBE30B /* UITextField+Saturn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+Saturn.swift"; sourceTree = "<group>"; };
+		EE33D2371BFF7E7600EBE30B /* UIScrollView+Saturn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Saturn.swift"; sourceTree = "<group>"; };
+		EE33D2391BFF85C500EBE30B /* CGSize+String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGSize+String.swift"; sourceTree = "<group>"; };
+		EE33D23B1BFFA31800EBE30B /* CGPoint+string.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGPoint+string.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,7 +123,9 @@
 			isa = PBXGroup;
 			children = (
 				C408ACDF1BF80B320077A4C2 /* Bool+String.swift */,
+				EE33D23B1BFFA31800EBE30B /* CGPoint+string.swift */,
 				C402B4A51BF7F5CA00FE563B /* CGRect+String.swift */,
+				EE33D2391BFF85C500EBE30B /* CGSize+String.swift */,
 				C408ACE91BF8E93F0077A4C2 /* NSLayoutConstraint+String.swift */,
 				C408ACE51BF86CF00077A4C2 /* NSParagraphStyle+String.swift */,
 				C408ACE31BF86A7E0077A4C2 /* NSText+String.swift */,
@@ -138,7 +148,9 @@
 				A9A527EC1BFD2889005B43C3 /* UIControl+Saturn.swift */,
 				A9A527E01BFA6DEF005B43C3 /* UIImageView+Saturn.swift */,
 				C402B4BA1BF805FA00FE563B /* UILabel+Saturn.swift */,
+				EE33D2351BFF7E1F00EBE30B /* UITextField+Saturn.swift */,
 				C402B4A91BF7F5CA00FE563B /* UIView+Saturn.swift */,
+				EE33D2371BFF7E7600EBE30B /* UIScrollView+Saturn.swift */,
 			);
 			path = UIKitExtensions;
 			sourceTree = "<group>";
@@ -283,6 +295,8 @@
 				C402B4AF1BF7F5CA00FE563B /* String+CGFloat.swift in Sources */,
 				C408ACE81BF8DA9D0077A4C2 /* NSLayoutConstraint+Saturn.swift in Sources */,
 				C408ACE41BF86A7E0077A4C2 /* NSText+String.swift in Sources */,
+				EE33D23C1BFFA31800EBE30B /* CGPoint+string.swift in Sources */,
+				EE33D2361BFF7E1F00EBE30B /* UITextField+Saturn.swift in Sources */,
 				A9A527EB1BFB8FE2005B43C3 /* UIButton+Saturn.swift in Sources */,
 				C408ACE01BF80B320077A4C2 /* Bool+String.swift in Sources */,
 				A9A527E11BFA6DEF005B43C3 /* UIImageView+Saturn.swift in Sources */,
@@ -293,6 +307,8 @@
 				A9A527E51BFA7B66005B43C3 /* UIView+String.swift in Sources */,
 				C402B4AC1BF7F5CA00FE563B /* SaturnObject.swift in Sources */,
 				C408ACE61BF86CF00077A4C2 /* NSParagraphStyle+String.swift in Sources */,
+				EE33D2381BFF7E7600EBE30B /* UIScrollView+Saturn.swift in Sources */,
+				EE33D23A1BFF85C500EBE30B /* CGSize+String.swift in Sources */,
 				C402B4AD1BF7F5CA00FE563B /* AEXML.swift in Sources */,
 				A9A527ED1BFD2889005B43C3 /* UIControl+Saturn.swift in Sources */,
 				C402B4B01BF7F5CA00FE563B /* UIColor+String.swift in Sources */,

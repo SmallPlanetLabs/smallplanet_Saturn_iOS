@@ -14,8 +14,21 @@ public protocol SaturnObject {
 }
 
 extension SaturnObject {
-    public static func readFromString(string: String, prepare: Bool = true, intoParent parent: AnyObject? = nil) -> SaturnObject? {
-        guard let xmlData = string.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false) else { return nil }
+    
+    public static func readFromFile(path: String?, intoParent parent: AnyObject? = nil) -> SaturnObject? {
+        guard let path = path else { return nil }
+        do {
+            let string = try String(contentsOfFile: path, encoding: NSUTF8StringEncoding)
+            return readFromString(string, intoParent: parent)
+        } catch let error as NSError {
+            print("error writing to url \(path)")
+            print(error.localizedDescription)
+        }
+        return nil
+    }
+    
+    public static func readFromString(string: String?, intoParent parent: AnyObject? = nil) -> SaturnObject? {
+        guard let string = string, xmlData = string.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false) else { return nil }
         let xmlDoc = try? AEXMLDocument(xmlData: xmlData, processNamespaces: false)
         return parseElement(xmlDoc?.root, intoParent: parent)
     }

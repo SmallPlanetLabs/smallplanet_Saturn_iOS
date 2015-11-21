@@ -82,7 +82,7 @@ class SaturnTests: XCTestCase {
         XCTAssertEqual(hostView.constraints.count, 4) // four constraints in root's parent
         XCTAssert(view != nil)
         XCTAssertEqual(view?.subviews.count, 2)
-        XCTAssertEqual(view?.constraints.count, 2) // two constraints from label1 in root
+        XCTAssertEqual(view?.constraints.count, 4) // two constraints from label1 in root
         
         let label1 = view?.objectsWithId("label1").first as? UILabel
         XCTAssert(label1 != nil)
@@ -110,7 +110,7 @@ class SaturnTests: XCTestCase {
         XCTAssertEqual(hostView.constraints.count, 4) // four constraints in root's parent
         XCTAssert(view != nil)
         XCTAssertEqual(view?.subviews.count, 1)
-        XCTAssertEqual(view?.constraints.count, 2) // two constraints from label1 in root
+        XCTAssertEqual(view?.constraints.count, 4) // two constraints from button1 in root
         
         let button = view?.objectsWithId("button1").first as? UIButton
         XCTAssert(button != nil)

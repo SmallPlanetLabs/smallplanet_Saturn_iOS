@@ -36,7 +36,8 @@ extension NSLayoutConstraint {
         if let constraint = constraints.first, second = constraint.secondItem as? UIView where constraint.firstItem.isDescendantOfView(second) {
             constraintView = second
         } else {
-            constraintView = constraints.first?.firstItem as? UIView ?? first.superview ?? first
+            let firstUIView = constraints.first?.firstItem as? UIView
+            constraintView = firstUIView?.superview ?? firstUIView ?? first.superview ?? first
         }
         constraintView.addConstraints(constraints)
         

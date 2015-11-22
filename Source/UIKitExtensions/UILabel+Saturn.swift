@@ -21,7 +21,33 @@ extension UILabel {
             enabled = Bool(stringLiteral: value)
         case "lineBreakMode":
             lineBreakMode = NSLineBreakMode(stringLiteral: value)
+        case "numberOfLines":
+            if let value = Int(value) {
+                numberOfLines = value
+            }
+        case "minimumScaleFactor":
+            if let value = value.asCGFloat {
+                minimumScaleFactor = value
+            }
+        case "adjustsFontSizeToFitWidth":
+            adjustsFontSizeToFitWidth = Bool(stringLiteral: value)
         default: break
+        }
+    }
+    
+    override public func setAttributes(attributes: [String : String]?) {
+        super.setAttributes(attributes)
+        guard let attributes = attributes else { return }
+        let fontSize: CGFloat
+        if let fontSizeString = attributes["fontSize"], size = fontSizeString.asCGFloat {
+            fontSize = size
+        } else {
+            fontSize = UIFont.systemFontSize()
+        }
+        if let fontName = attributes["fontName"] {
+            font = UIFont(name: fontName, size: fontSize)
+        } else {
+            font = UIFont.systemFontOfSize(fontSize)
         }
     }
 }

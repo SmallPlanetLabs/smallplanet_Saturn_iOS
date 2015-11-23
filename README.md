@@ -3,7 +3,7 @@
 License
 -------
 
-**Saturn** is free software distributed under the terms of the MIT license, reproduced below. GAXB may be used for any purpose, including commercial purposes, at absolutely no cost. No paperwork, no royalties, no GNU-like "copyleft" restrictions. Just download and enjoy.
+**Saturn** is free software distributed under the terms of the MIT license, reproduced below. Saturn may be used for any purpose, including commercial purposes, at absolutely no cost. No paperwork, no royalties, no GNU-like "copyleft" restrictions. Just download and enjoy.
 
 See LICENSE for details.
 

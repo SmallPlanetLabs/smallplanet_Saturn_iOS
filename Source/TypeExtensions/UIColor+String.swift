@@ -11,9 +11,9 @@ extension UIColor {
     public convenience init(stringLiteral value: String) {
         var (r,g,b,a): (CGFloat, CGFloat, CGFloat, CGFloat) = (0.0, 0.0, 0.0, 1.0)
         if value.hasPrefix("#") {
-            let substring = value.substringFromIndex(value.startIndex.advancedBy(1))
+            let substring = value.substring(from: value.characters.index(value.startIndex, offsetBy: 1))
             var hexNumber:UInt32 = 0;
-            let _ = NSScanner(string: substring).scanHexInt(&hexNumber)
+            let _ = Scanner(string: substring).scanHexInt32(&hexNumber)
             switch substring.characters.count {
             case 8:
                 r = CGFloat((hexNumber & 0xFF000000) >> 24) / 255.0

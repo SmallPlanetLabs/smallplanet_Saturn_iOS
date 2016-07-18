@@ -11,35 +11,35 @@ extension UIViewContentMode: StringLiteralConvertible {
     public typealias UnicodeScalarLiteralType = Character
     
     public init(stringLiteral value: String) {
-        switch value.lowercaseString {
+        switch value.lowercased() {
         case "scaletofill":
-            self = ScaleToFill
+            self = scaleToFill
         case "scaleaspectfit":
-            self = ScaleAspectFit
+            self = scaleAspectFit
         case "scaleaspectfill":
-            self = ScaleAspectFill
+            self = scaleAspectFill
         case "redraw":
-            self = Redraw
+            self = redraw
         case "center":
-            self = Center
+            self = center
         case "top":
-            self = Top
+            self = top
         case "bottom":
-            self = Bottom
+            self = bottom
         case "left":
-            self = Left
+            self = left
         case "right":
-            self = Right
+            self = right
         case "topleft":
-            self = TopLeft
+            self = topLeft
         case "topright":
-            self = TopRight
+            self = topRight
         case "bottomleft":
-            self = BottomLeft
+            self = bottomLeft
         case "bottomright":
-            self = BottomRight
+            self = bottomRight
         default:
-            self = Center
+            self = center
         }
     }
     

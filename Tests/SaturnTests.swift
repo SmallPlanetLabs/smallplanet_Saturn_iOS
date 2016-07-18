@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import Saturn
+import Saturn
 
 class SaturnTests: XCTestCase {
     
@@ -114,7 +114,7 @@ class SaturnTests: XCTestCase {
         
         let button = view?.objectsWithId("button1").first as? UIButton
         XCTAssert(button != nil)
-        XCTAssertEqual(button?.titleForState(.Normal), "Click me!")
-        XCTAssertEqual(button?.titleForState([.Selected, .Highlighted]), "S,H")
+        XCTAssertEqual(button?.title(for: .normal), "Click me!")
+        XCTAssertEqual(button?.title(for: [.selected, .highlighted]), "S,H")
     }
 }

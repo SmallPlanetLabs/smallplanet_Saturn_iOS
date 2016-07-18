@@ -8,11 +8,11 @@
 
 extension UIView {
     
-    public override func loadIntoParent(parent: AnyObject) {
+    public override func loadIntoParent(_ parent: AnyObject) {
         (parent as? UIView)?.addSubview(self)
     }
     
-    public override func setAttribute(value: String, forProperty property: String) {
+    public override func setAttribute(_ value: String, forProperty property: String) {
         super.setAttribute(value, forProperty: property)
         switch property {
         case "alpha":
@@ -31,7 +31,7 @@ extension UIView {
         }
     }
     
-    override public func objectsWithId(id: String) -> [AnyObject] {
+    override public func objectsWithId(_ id: String) -> [AnyObject] {
         var objects = subviews.reduce([]) { $0 + $1.objectsWithId(id) }
         if id == self.id {
             objects.append(self)

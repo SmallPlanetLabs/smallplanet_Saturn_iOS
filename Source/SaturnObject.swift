@@ -7,18 +7,18 @@
 //
 
 public protocol SaturnObject {
-    func loadIntoParent(parent: AnyObject)
-    mutating func setAttribute(attribute: String, forProperty property: String)
-    mutating func setAttributes(attributes:[String:String]?)
-    func objectsWithId(id: String) -> [AnyObject]
+    func loadIntoParent(_ parent: AnyObject)
+    mutating func setAttribute(_ attribute: String, forProperty property: String)
+    mutating func setAttributes(_ attributes:[String:String]?)
+    func objectsWithId(_ id: String) -> [AnyObject]
 }
 
 extension SaturnObject {
     
-    public static func readFromFile(path: String?, intoParent parent: AnyObject? = nil) -> SaturnObject? {
+    public static func readFromFile(_ path: String?, intoParent parent: AnyObject? = nil) -> SaturnObject? {
         guard let path = path else { return nil }
         do {
-            let string = try String(contentsOfFile: path, encoding: NSUTF8StringEncoding)
+            let string = try String(contentsOfFile: path, encoding: String.Encoding.utf8)
             return readFromString(string, intoParent: parent)
         } catch let error as NSError {
             print("error writing to url \(path)")
@@ -27,13 +27,13 @@ extension SaturnObject {
         return nil
     }
     
-    public static func readFromString(string: String?, intoParent parent: AnyObject? = nil) -> SaturnObject? {
-        guard let string = string, xmlData = string.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false) else { return nil }
+    public static func readFromString(_ string: String?, intoParent parent: AnyObject? = nil) -> SaturnObject? {
+        guard let string = string, xmlData = string.data(using: String.Encoding.utf8, allowLossyConversion: false) else { return nil }
         let xmlDoc = try? AEXMLDocument(xmlData: xmlData, processNamespaces: false)
         return parseElement(xmlDoc?.root, intoParent: parent)
     }
     
-    public static func parseElement(element: AEXMLElement?, intoParent parent: AnyObject? = nil) -> SaturnObject? {
+    public static func parseElement(_ element: AEXMLElement?, intoParent parent: AnyObject? = nil) -> SaturnObject? {
         guard let element = element, entityClass = classFromElement(element) else { return nil }
         
         let entity = entityClass.init()
@@ -42,12 +42,12 @@ extension SaturnObject {
             entity.loadIntoParent(parent)
         }
         element.children.forEach { child in
-            parseElement(child, intoParent: entity)
+            _ = parseElement(child, intoParent: entity)
         }
         return entity
     }
 
-    private static func classFromElement(element: AEXMLElement) -> NSObject.Type? {
+    private static func classFromElement(_ element: AEXMLElement) -> NSObject.Type? {
         return (NSClassFromString(element.name) as? NSObject.Type) ??
             (NSClassFromString("Saturn.\(element.name)") as? NSObject.Type)
     }

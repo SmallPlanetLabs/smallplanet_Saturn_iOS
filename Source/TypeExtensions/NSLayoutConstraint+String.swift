@@ -12,49 +12,49 @@ extension NSLayoutAttribute: StringLiteralConvertible {
     public typealias UnicodeScalarLiteralType = Character
     
     public init(stringLiteral value: String) {
-        switch value.lowercaseString {
+        switch value.lowercased() {
         case "left":
-            self = Left
+            self = left
         case "right":
-            self = Right
+            self = right
         case "top":
-            self = Top
+            self = top
         case "bottom":
-            self = Bottom
+            self = bottom
         case "leading":
-            self = Leading
+            self = leading
         case "trailing":
-            self = Trailing
+            self = trailing
         case "width":
-            self = Width
+            self = width
         case "height":
-            self = Height
+            self = height
         case "centerx":
-            self = CenterX
+            self = centerX
         case "centery":
-            self = CenterY
-        case "baseline":
-            self = Baseline
+            self = centerY
+        case "lastBaseline":
+            self = lastBaseline
         case "firstbaseline":
-            self = FirstBaseline
+            self = firstBaseline
         case "leftmargin":
-            self = LeftMargin
+            self = leftMargin
         case "rightmargin":
-            self = RightMargin
+            self = rightMargin
         case "topmargin":
-            self = TopMargin
+            self = topMargin
         case "bottommargin":
-            self = BottomMargin
+            self = bottomMargin
         case "leadingmargin":
-            self = LeadingMargin
+            self = leadingMargin
         case "trailingmargin":
-            self = TrailingMargin
+            self = trailingMargin
         case "centerxwithinmargins":
-            self = CenterXWithinMargins
+            self = centerXWithinMargins
         case "centerywithinmargins":
-            self = CenterYWithinMargins
+            self = centerYWithinMargins
         default:
-            self = NotAnAttribute
+            self = notAnAttribute
         }
     }
     
@@ -74,13 +74,13 @@ extension NSLayoutRelation : StringLiteralConvertible {
     public typealias UnicodeScalarLiteralType = Character
     
     public init(stringLiteral value: String) {
-        switch value.lowercaseString {
+        switch value.lowercased() {
         case "lessthanorequal", "<=":
-            self = LessThanOrEqual
+            self = lessThanOrEqual
         case "greaterthanorequal", ">=":
-            self = GreaterThanOrEqual
+            self = greaterThanOrEqual
         default:
-            self = Equal
+            self = equal
         }
     }
 

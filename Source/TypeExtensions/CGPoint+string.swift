@@ -23,9 +23,9 @@ extension CGPoint: StringLiteralConvertible {
         self.init(stringLiteral: "\(value)")
     }
     
-    public static func componentsFromString(string: String) -> (CGFloat, CGFloat) {
+    public static func componentsFromString(_ string: String) -> (CGFloat, CGFloat) {
         var x:Float = 0.0, y:Float = 0.0
-        var components = string.componentsSeparatedByString(",")
+        var components = string.components(separatedBy: ",")
         if components.count == 2 {
             x = (components[0] as NSString).floatValue
             y = (components[1] as NSString).floatValue

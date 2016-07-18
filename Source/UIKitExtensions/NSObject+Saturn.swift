@@ -12,9 +12,9 @@ extension NSObject: SaturnObject {
         static var id = "SaturnAssociatedKey:id"
     }
     
-    public func loadIntoParent(parent: AnyObject) { }
+    public func loadIntoParent(_ parent: AnyObject) { }
     
-    public func setAttribute(value: String, forProperty property:String) {
+    public func setAttribute(_ value: String, forProperty property:String) {
         switch property {
         case "id":
             id = value
@@ -22,7 +22,7 @@ extension NSObject: SaturnObject {
         }
     }
 
-    public func setAttributes(attributes:[String:String]?) {
+    public func setAttributes(_ attributes:[String:String]?) {
         guard let attributes = attributes else { return }
         for (property, value) in attributes {
             setAttribute(value, forProperty: property)
@@ -38,7 +38,7 @@ extension NSObject: SaturnObject {
         }
     }
     
-    public func objectsWithId(id: String) -> [AnyObject] {
+    public func objectsWithId(_ id: String) -> [AnyObject] {
         return []
     }
 

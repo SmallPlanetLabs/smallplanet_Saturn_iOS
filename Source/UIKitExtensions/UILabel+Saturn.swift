@@ -8,7 +8,7 @@
 
 // overriding SaturnObject protocol conformance
 extension UILabel {
-    override public func setAttribute(value: String, forProperty property: String) {
+    override public func setAttribute(_ value: String, forProperty property: String) {
         super.setAttribute(value, forProperty: property)
         switch property {
         case "text":
@@ -18,7 +18,7 @@ extension UILabel {
         case "textAlignment":
             textAlignment = NSTextAlignment(stringLiteral: value)
         case "enabled":
-            enabled = Bool(stringLiteral: value)
+            isEnabled = Bool(stringLiteral: value)
         case "lineBreakMode":
             lineBreakMode = NSLineBreakMode(stringLiteral: value)
         case "numberOfLines":
@@ -35,7 +35,7 @@ extension UILabel {
         }
     }
     
-    override public func setAttributes(attributes: [String : String]?) {
+    override public func setAttributes(_ attributes: [String : String]?) {
         super.setAttributes(attributes)
         guard let attributes = attributes else { return }
         let fontSize: CGFloat
@@ -47,7 +47,7 @@ extension UILabel {
         if let fontName = attributes["fontName"] {
             font = UIFont(name: fontName, size: fontSize)
         } else {
-            font = UIFont.systemFontOfSize(fontSize)
+            font = UIFont.systemFont(ofSize: fontSize)
         }
     }
 }

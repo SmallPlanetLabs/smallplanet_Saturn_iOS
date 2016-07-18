@@ -239,14 +239,20 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0710;
-				LastUpgradeCheck = 0710;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Small Planet";
 				TargetAttributes = {
 					C403A3E51BF787320089299D = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = 6TVV5C2TV8;
+						DevelopmentTeamName = "Michael McHenry";
+						LastSwiftMigration = 0800;
 					};
 					C403A3EF1BF787330089299D = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = 6TVV5C2TV8;
+						DevelopmentTeamName = "Michael McHenry";
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -441,6 +447,7 @@
 				PRODUCT_NAME = Saturn;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -459,6 +466,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.smallplanet.Saturn;
 				PRODUCT_NAME = Saturn;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -469,6 +478,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.smallplanet.SaturnTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -479,6 +489,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.smallplanet.SaturnTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

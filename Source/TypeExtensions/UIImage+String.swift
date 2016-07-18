@@ -9,7 +9,7 @@
 extension UIImage {
     
     public convenience init?(stringLiteral value: String) {
-        if value.rangeOfString(":/") != nil {
+        if value.range(of: ":/") != nil {
             self.init(contentsOfFile:(String(bundlePath: value)))
         } else {
             self.init(named: value)

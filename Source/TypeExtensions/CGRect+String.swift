@@ -23,9 +23,9 @@ extension CGRect: StringLiteralConvertible {
         self.init(stringLiteral: "\(value)")
     }
     
-    public static func componentsFromString(string: String) -> (CGPoint, CGSize) {
+    public static func componentsFromString(_ string: String) -> (CGPoint, CGSize) {
         var x:Float=0.0, y:Float=0.0, w:Float=0.0, h:Float=0.0
-        var components = string.componentsSeparatedByString(",")
+        var components = string.components(separatedBy: ",")
         if components.count == 4 {
             x = (components[0] as NSString).floatValue
             y = (components[1] as NSString).floatValue

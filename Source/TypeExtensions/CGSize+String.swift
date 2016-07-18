@@ -23,9 +23,9 @@ extension CGSize: StringLiteralConvertible {
         self.init(stringLiteral: "\(value)")
     }
     
-    public static func componentsFromString(string: String) -> (CGFloat, CGFloat) {
+    public static func componentsFromString(_ string: String) -> (CGFloat, CGFloat) {
         var w:Float = 0.0, h:Float = 0.0
-        var components = string.componentsSeparatedByString(",")
+        var components = string.components(separatedBy: ",")
         if components.count == 2 {
             w = (components[0] as NSString).floatValue
             h = (components[1] as NSString).floatValue

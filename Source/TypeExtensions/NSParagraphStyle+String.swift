@@ -11,19 +11,19 @@ extension NSLineBreakMode: StringLiteralConvertible {
     public typealias UnicodeScalarLiteralType = Character
     
     public init(stringLiteral value: String) {
-        switch value.lowercaseString {
+        switch value.lowercased() {
         case "ByWordWrapping":
-            self = ByWordWrapping
+            self = byWordWrapping
         case "ByCharWrapping":
-            self = ByCharWrapping
+            self = byCharWrapping
         case "ByClipping":
-            self = ByClipping
+            self = byClipping
         case "ByTruncatingHead":
-            self = ByTruncatingHead
+            self = byTruncatingHead
         case "ByTruncatingMiddle":
-            self = ByTruncatingMiddle
+            self = byTruncatingMiddle
         default:
-            self = ByTruncatingTail
+            self = byTruncatingTail
         }
     }
     

@@ -18,12 +18,12 @@ extension NSLayoutConstraint {
         }
     }
 
-    public override func setAttributes(attributes:[String:String]?) {
+    public override func setAttributes(_ attributes:[String:String]?) {
         guard let attributes = attributes else { return }
         objc_setAssociatedObject(self, &AssociatedKeys.attributes, attributes, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
     }
 
-    public override func loadIntoParent(parent: AnyObject) {
+    public override func loadIntoParent(_ parent: AnyObject) {
         guard let attributes = attributes, first = firstItem(inEntity: parent) else { return }
         let second = secondItem(inEntity: parent)
         
@@ -33,7 +33,7 @@ extension NSLayoutConstraint {
         }
         
         let constraintView: UIView
-        if let constraint = constraints.first, second = constraint.secondItem as? UIView where constraint.firstItem.isDescendantOfView(second) {
+        if let constraint = constraints.first, second = constraint.secondItem as? UIView where constraint.firstItem.isDescendant(of: second) {
             constraintView = second
         } else {
             let firstUIView = constraints.first?.firstItem as? UIView
@@ -74,18 +74,18 @@ extension NSLayoutConstraint {
         return attributes?["ruleSet"] ?? ""
     }
     
-    public func makeConstraints(first: UIView, second: UIView?) -> [NSLayoutConstraint] {
+    public func makeConstraints(_ first: UIView, second: UIView?) -> [NSLayoutConstraint] {
         guard let attributes = attributes else { return [] }
-        switch ruleSet.lowercaseString {
+        switch ruleSet.lowercased() {
         case "fillsuperview":
             let superview = first.superview
-            return [NSLayoutConstraint(item: first, toItem: superview, equalAttribute: .Top),
-                NSLayoutConstraint(item: first, toItem: superview, equalAttribute: .Right),
-                NSLayoutConstraint(item: first, toItem: superview, equalAttribute: .Bottom),
-                NSLayoutConstraint(item: first, toItem: superview, equalAttribute: .Left)]
+            return [NSLayoutConstraint(item: first, toItem: superview, equalAttribute: .top),
+                NSLayoutConstraint(item: first, toItem: superview, equalAttribute: .right),
+                NSLayoutConstraint(item: first, toItem: superview, equalAttribute: .bottom),
+                NSLayoutConstraint(item: first, toItem: superview, equalAttribute: .left)]
         case "equalsize":
-            return [NSLayoutConstraint(item: first, toItem: second, equalAttribute: .Width),
-                NSLayoutConstraint(item: first, toItem: second, equalAttribute: .Height)]
+            return [NSLayoutConstraint(item: first, toItem: second, equalAttribute: .width),
+                NSLayoutConstraint(item: first, toItem: second, equalAttribute: .height)]
         default:
             return [NSLayoutConstraint(item: first,
                 attribute: NSLayoutAttribute(stringLiteral: attributes["firstAttribute"] ?? ""),
@@ -102,6 +102,6 @@ extension NSLayoutConstraint {
 
 extension NSLayoutConstraint {
     public convenience init(item: UIView, toItem: UIView?, equalAttribute attribute: NSLayoutAttribute) {
-        self.init(item: item, attribute: attribute, relatedBy:.Equal, toItem:toItem, attribute: attribute, multiplier: 1, constant: 0)
+        self.init(item: item, attribute: attribute, relatedBy:.equal, toItem:toItem, attribute: attribute, multiplier: 1, constant: 0)
     }
 }

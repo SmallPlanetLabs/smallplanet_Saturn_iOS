@@ -11,7 +11,7 @@ extension Bool: StringLiteralConvertible {
     public typealias UnicodeScalarLiteralType = Character
     
     public init(stringLiteral value: String) {
-        self.init(value.lowercaseString == "true")
+        self.init(value.lowercased() == "true")
     }
     
     public init(extendedGraphemeClusterLiteral value: ExtendedGraphemeClusterLiteralType) {

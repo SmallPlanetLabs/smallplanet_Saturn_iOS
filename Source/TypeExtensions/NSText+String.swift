@@ -11,17 +11,17 @@ extension NSTextAlignment: StringLiteralConvertible {
     public typealias UnicodeScalarLiteralType = Character
 
     public init(stringLiteral value: String) {
-        switch value.lowercaseString {
+        switch value.lowercased() {
         case "center":
-            self = Center
+            self = center
         case "Right":
-            self = Right
+            self = right
         case "Justified":
-            self = Justified
+            self = justified
         case "Natural":
-            self = Natural
+            self = natural
         default:
-            self = Left
+            self = left
         }
     }
     

@@ -7,7 +7,7 @@
 //
 
 extension UIScrollView {
-    override public func setAttribute(value: String, forProperty property: String) {
+    override public func setAttribute(_ value: String, forProperty property: String) {
         super.setAttribute(value, forProperty: property)
         switch property {
         case "contentOffset":
@@ -15,13 +15,13 @@ extension UIScrollView {
         case "contentSize":
             contentSize = CGSize(stringLiteral: value)
         case "scrollEnabled":
-            scrollEnabled = Bool(stringLiteral: value)
+            isScrollEnabled = Bool(stringLiteral: value)
         case "directionalLockEnabled":
-            directionalLockEnabled = Bool(stringLiteral: value)
+            isDirectionalLockEnabled = Bool(stringLiteral: value)
         case "scrollsToTop":
             scrollsToTop = Bool(stringLiteral: value)
         case "pagingEnabled":
-            pagingEnabled = Bool(stringLiteral: value)
+            isPagingEnabled = Bool(stringLiteral: value)
         case "bounces":
             bounces = Bool(stringLiteral: value)
         case "alwaysBounceVertical":

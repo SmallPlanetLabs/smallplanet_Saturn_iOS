@@ -7,7 +7,7 @@
 //
 
 extension UIImageView {
-    override public func setAttribute(value: String, forProperty property: String) {
+    override public func setAttribute(_ value: String, forProperty property: String) {
         super.setAttribute(value, forProperty: property)
         switch property {
         case "image":

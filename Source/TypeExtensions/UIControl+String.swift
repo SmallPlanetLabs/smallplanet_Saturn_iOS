@@ -13,30 +13,30 @@ extension UIControlState : StringLiteralConvertible {
     // Provides bitwise OptionSetType functionality such that "highlighted,selected" is
     // equivalent to [.Highlighted, .Selected]
     public init(stringLiteral value: String) {
-        func stateForString(value: String) -> UIControlState {
-            switch value.lowercaseString {
+        func stateForString(_ value: String) -> UIControlState {
+            switch value.lowercased() {
             case "normal":
-                return .Normal
+                return UIControlState()
             case "highlighted":
-                return .Highlighted
+                return .highlighted
             case "disabled":
-                return .Disabled
+                return .disabled
             case "selected":
-                return .Selected
+                return .selected
             case "application":
-                return .Application
+                return .application
             case "reserved":
-                return .Reserved
+                return .reserved
             case "focused":
                 if #available(iOS 9.0, *) {
-                    return .Focused
+                    return .focused
                 }
             default: break
             }
-            return .Normal
+            return UIControlState()
         }
 
-        let state = value.componentsSeparatedByString(",").reduce(UIControlState()) { $0.union(stateForString($1)) }
+        let state = value.components(separatedBy: ",").reduce(UIControlState()) { $0.union(stateForString($1)) }
         self.init(rawValue: state.rawValue)
     }
     
@@ -56,15 +56,15 @@ extension UIControlContentVerticalAlignment : StringLiteralConvertible {
     public typealias UnicodeScalarLiteralType = Character
     
     public init(stringLiteral value: String) {
-        switch value.lowercaseString {
+        switch value.lowercased() {
         case "fill":
-            self = Fill
+            self = fill
         case "top":
-            self = Top
+            self = top
         case "bottom":
-            self = Bottom
+            self = bottom
         default:
-            self = Center
+            self = center
         }
     }
     
@@ -84,15 +84,15 @@ extension UIControlContentHorizontalAlignment : StringLiteralConvertible {
     public typealias UnicodeScalarLiteralType = Character
     
     public init(stringLiteral value: String) {
-        switch value.lowercaseString {
+        switch value.lowercased() {
         case "fill":
-            self = Fill
+            self = fill
         case "left":
-            self = Left
+            self = left
         case "right":
-            self = Right
+            self = right
         default:
-            self = Center
+            self = center
         }
     }
     

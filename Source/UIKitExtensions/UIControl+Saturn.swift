@@ -7,15 +7,15 @@
 //
 
 extension UIControl {
-    override public func setAttribute(value: String, forProperty property: String) {
+    override public func setAttribute(_ value: String, forProperty property: String) {
         super.setAttribute(value, forProperty: property)
-        switch property.lowercaseString {
+        switch property.lowercased() {
         case "enabled":
-            enabled = Bool(stringLiteral: value)
+            isEnabled = Bool(stringLiteral: value)
         case "selected":
-            selected = Bool(stringLiteral: value)
+            isSelected = Bool(stringLiteral: value)
         case "highlighted":
-            highlighted = Bool(stringLiteral: value)
+            isHighlighted = Bool(stringLiteral: value)
         case "contentverticalalignment":
             contentVerticalAlignment = UIControlContentVerticalAlignment(stringLiteral: value)
         case "contenthorizontalalignment":

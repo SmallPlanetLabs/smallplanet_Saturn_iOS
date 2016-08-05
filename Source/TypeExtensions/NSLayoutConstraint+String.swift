@@ -6,7 +6,7 @@
 //  Copyright © 2015 Small Planet. All rights reserved.
 //
 
-extension NSLayoutAttribute: StringLiteralConvertible {
+extension NSLayoutAttribute: ExpressibleByStringLiteral {
     
     public typealias ExtendedGraphemeClusterLiteralType = StringLiteralType
     public typealias UnicodeScalarLiteralType = Character
@@ -14,47 +14,47 @@ extension NSLayoutAttribute: StringLiteralConvertible {
     public init(stringLiteral value: String) {
         switch value.lowercased() {
         case "left":
-            self = left
+            self = .left
         case "right":
-            self = right
+            self = .right
         case "top":
-            self = top
+            self = .top
         case "bottom":
-            self = bottom
+            self = .bottom
         case "leading":
-            self = leading
+            self = .leading
         case "trailing":
-            self = trailing
+            self = .trailing
         case "width":
-            self = width
+            self = .width
         case "height":
-            self = height
+            self = .height
         case "centerx":
-            self = centerX
+            self = .centerX
         case "centery":
-            self = centerY
+            self = .centerY
         case "lastBaseline":
-            self = lastBaseline
+            self = .lastBaseline
         case "firstbaseline":
-            self = firstBaseline
+            self = .firstBaseline
         case "leftmargin":
-            self = leftMargin
+            self = .leftMargin
         case "rightmargin":
-            self = rightMargin
+            self = .rightMargin
         case "topmargin":
-            self = topMargin
+            self = .topMargin
         case "bottommargin":
-            self = bottomMargin
+            self = .bottomMargin
         case "leadingmargin":
-            self = leadingMargin
+            self = .leadingMargin
         case "trailingmargin":
-            self = trailingMargin
+            self = .trailingMargin
         case "centerxwithinmargins":
-            self = centerXWithinMargins
+            self = .centerXWithinMargins
         case "centerywithinmargins":
-            self = centerYWithinMargins
+            self = .centerYWithinMargins
         default:
-            self = notAnAttribute
+            self = .notAnAttribute
         }
     }
     
@@ -68,7 +68,7 @@ extension NSLayoutAttribute: StringLiteralConvertible {
 
 }
 
-extension NSLayoutRelation : StringLiteralConvertible {
+extension NSLayoutRelation : ExpressibleByStringLiteral {
     
     public typealias ExtendedGraphemeClusterLiteralType = StringLiteralType
     public typealias UnicodeScalarLiteralType = Character
@@ -76,11 +76,11 @@ extension NSLayoutRelation : StringLiteralConvertible {
     public init(stringLiteral value: String) {
         switch value.lowercased() {
         case "lessthanorequal", "<=":
-            self = lessThanOrEqual
+            self = .lessThanOrEqual
         case "greaterthanorequal", ">=":
-            self = greaterThanOrEqual
+            self = .greaterThanOrEqual
         default:
-            self = equal
+            self = .equal
         }
     }
 

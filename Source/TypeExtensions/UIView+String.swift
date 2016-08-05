@@ -6,40 +6,40 @@
 //  Copyright © 2015 Small Planet. All rights reserved.
 //
 
-extension UIViewContentMode: StringLiteralConvertible {
+extension UIViewContentMode: ExpressibleByStringLiteral {
     public typealias ExtendedGraphemeClusterLiteralType = StringLiteralType
     public typealias UnicodeScalarLiteralType = Character
     
     public init(stringLiteral value: String) {
         switch value.lowercased() {
         case "scaletofill":
-            self = scaleToFill
+            self = .scaleToFill
         case "scaleaspectfit":
-            self = scaleAspectFit
+            self = .scaleAspectFit
         case "scaleaspectfill":
-            self = scaleAspectFill
+            self = .scaleAspectFill
         case "redraw":
-            self = redraw
+            self = .redraw
         case "center":
-            self = center
+            self = .center
         case "top":
-            self = top
+            self = .top
         case "bottom":
-            self = bottom
+            self = .bottom
         case "left":
-            self = left
+            self = .left
         case "right":
-            self = right
+            self = .right
         case "topleft":
-            self = topLeft
+            self = .topLeft
         case "topright":
-            self = topRight
+            self = .topRight
         case "bottomleft":
-            self = bottomLeft
+            self = .bottomLeft
         case "bottomright":
-            self = bottomRight
+            self = .bottomRight
         default:
-            self = center
+            self = .center
         }
     }
     

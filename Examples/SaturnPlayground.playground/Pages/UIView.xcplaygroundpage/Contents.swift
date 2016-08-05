@@ -30,11 +30,11 @@ let xml =
 let hostView = UIView(frame: CGRect(x: 0, y: 0, width: 240, height: 380))
 
 hostView.layer.borderWidth = 1
-hostView.layer.borderColor = UIColor.blueColor().CGColor
-hostView.backgroundColor = .whiteColor()
+hostView.layer.borderColor = UIColor.blue.cgColor
+hostView.backgroundColor = UIColor.white
 
 let view = UIView.readFromString(xml, intoParent: hostView)
 //
-XCPlaygroundPage.currentPage.liveView = hostView
+PlaygroundPage.current.liveView = hostView
 
 

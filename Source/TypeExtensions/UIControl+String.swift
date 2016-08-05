@@ -6,7 +6,7 @@
 //  Copyright © 2015 Small Planet. All rights reserved.
 //
 
-extension UIControlState : StringLiteralConvertible {
+extension UIControlState : ExpressibleByStringLiteral {
     public typealias ExtendedGraphemeClusterLiteralType = StringLiteralType
     public typealias UnicodeScalarLiteralType = Character
     
@@ -51,20 +51,20 @@ extension UIControlState : StringLiteralConvertible {
 }
 
 
-extension UIControlContentVerticalAlignment : StringLiteralConvertible {
+extension UIControlContentVerticalAlignment : ExpressibleByStringLiteral {
     public typealias ExtendedGraphemeClusterLiteralType = StringLiteralType
     public typealias UnicodeScalarLiteralType = Character
     
     public init(stringLiteral value: String) {
         switch value.lowercased() {
         case "fill":
-            self = fill
+            self = .fill
         case "top":
-            self = top
+            self = .top
         case "bottom":
-            self = bottom
+            self = .bottom
         default:
-            self = center
+            self = .center
         }
     }
     
@@ -79,20 +79,20 @@ extension UIControlContentVerticalAlignment : StringLiteralConvertible {
 }
 
 
-extension UIControlContentHorizontalAlignment : StringLiteralConvertible {
+extension UIControlContentHorizontalAlignment : ExpressibleByStringLiteral {
     public typealias ExtendedGraphemeClusterLiteralType = StringLiteralType
     public typealias UnicodeScalarLiteralType = Character
     
     public init(stringLiteral value: String) {
         switch value.lowercased() {
         case "fill":
-            self = fill
+            self = .fill
         case "left":
-            self = left
+            self = .left
         case "right":
-            self = right
+            self = .right
         default:
-            self = center
+            self = .center
         }
     }
     

@@ -6,7 +6,7 @@
 //  Copyright © 2015 Small Planet. All rights reserved.
 //
 
-extension CGSize: StringLiteralConvertible {
+extension CGSize: ExpressibleByStringLiteral {
     public typealias ExtendedGraphemeClusterLiteralType = StringLiteralType
     public typealias UnicodeScalarLiteralType = Character
     

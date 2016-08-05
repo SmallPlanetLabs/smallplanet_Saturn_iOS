@@ -120,7 +120,7 @@ public class AEXMLElement {
         return child
     }
     
-    public func addChild(name: String, value: String? = nil, attributes: [NSObject : AnyObject] = [NSObject : AnyObject]()) -> AEXMLElement {
+    public func addChild(_ name: String, value: String? = nil, attributes: [NSObject : AnyObject] = [NSObject : AnyObject]()) -> AEXMLElement {
         let child = AEXMLElement(name, value: value, attributes: attributes)
         return addChild(child)
     }
@@ -300,7 +300,7 @@ class AEXMLParser: NSObject, XMLParserDelegate {
     
     func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String: String]) {
         currentValue = String()
-        currentElement = currentParent?.addChild(name: elementName, attributes: attributeDict)
+        currentElement = currentParent?.addChild(elementName, attributes: attributeDict)
         currentElement?.namespaceURI = namespaceURI
         currentParent = currentElement
     }
@@ -315,7 +315,7 @@ class AEXMLParser: NSObject, XMLParserDelegate {
         currentParent = currentParent?.parent
     }
     
-    func parser(_ parser: XMLParser, parseErrorOccurred parseError: NSError) {
+    @nonobjc func parser(_ parser: XMLParser, parseErrorOccurred parseError: NSError) {
         self.parseError = parseError
     }
     

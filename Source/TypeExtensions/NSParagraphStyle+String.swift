@@ -6,24 +6,24 @@
 //  Copyright © 2015 Small Planet. All rights reserved.
 //
 
-extension NSLineBreakMode: StringLiteralConvertible {
+extension NSLineBreakMode: ExpressibleByStringLiteral {
     public typealias ExtendedGraphemeClusterLiteralType = StringLiteralType
     public typealias UnicodeScalarLiteralType = Character
     
     public init(stringLiteral value: String) {
         switch value.lowercased() {
-        case "ByWordWrapping":
-            self = byWordWrapping
-        case "ByCharWrapping":
-            self = byCharWrapping
-        case "ByClipping":
-            self = byClipping
-        case "ByTruncatingHead":
-            self = byTruncatingHead
-        case "ByTruncatingMiddle":
-            self = byTruncatingMiddle
+        case "bywordwrapping":
+            self = .byWordWrapping
+        case "bycharwrapping":
+            self = .byCharWrapping
+        case "byclipping":
+            self = .byClipping
+        case "bytruncatinghead":
+            self = .byTruncatingHead
+        case "bytruncatingmiddle":
+            self = .byTruncatingMiddle
         default:
-            self = byTruncatingTail
+            self = .byTruncatingTail
         }
     }
     

@@ -10,7 +10,7 @@
 
 import UIKit
 import Saturn
-import XCPlayground
+import PlaygroundSupport
 
 let xml =
 "<UIView id='root' backgroundColor='#ab49e1' clipsToBounds='false'>" +
@@ -39,9 +39,8 @@ let xml =
 let hostView = UIView(frame: CGRect(x: 0, y: 0, width: 320, height: 600))
 
 hostView.layer.borderWidth = 1
-hostView.layer.borderColor = UIColor.grayColor().CGColor
-hostView.backgroundColor = .whiteColor()
+hostView.layer.borderColor = UIColor.blue.cgColor
+hostView.backgroundColor = UIColor.white
 
 let view = UIView.readFromString(xml, intoParent: hostView)
-
-XCPlaygroundPage.currentPage.liveView = hostView
+PlaygroundPage.current.liveView = hostView

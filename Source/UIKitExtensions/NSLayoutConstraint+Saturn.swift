@@ -24,7 +24,7 @@ extension NSLayoutConstraint {
     }
 
     public override func loadIntoParent(_ parent: AnyObject) {
-        guard let attributes = attributes, first = firstItem(inEntity: parent) else { return }
+        guard let attributes = attributes, let first = firstItem(inEntity: parent) else { return }
         let second = secondItem(inEntity: parent)
         
         let constraints = makeConstraints(first, second: second)
@@ -33,7 +33,7 @@ extension NSLayoutConstraint {
         }
         
         let constraintView: UIView
-        if let constraint = constraints.first, second = constraint.secondItem as? UIView where constraint.firstItem.isDescendant(of: second) {
+        if let constraint = constraints.first, let second = constraint.secondItem as? UIView, constraint.firstItem.isDescendant(of: second) {
             constraintView = second
         } else {
             let firstUIView = constraints.first?.firstItem as? UIView
@@ -44,13 +44,13 @@ extension NSLayoutConstraint {
         if first.superview != nil {
             first.translatesAutoresizingMaskIntoConstraints = false
         }
-        if let second = second where second.superview != nil {
+        if let second = second, second.superview != nil {
             second.translatesAutoresizingMaskIntoConstraints = false
         }
     }
 
     func item(withId id: String?, inEntity entity: AnyObject) -> UIView? {
-        guard let id = id, entity = entity as? SaturnObject else { return nil }
+        guard let id = id, let entity = entity as? SaturnObject else { return nil }
         return ((entity as? UIView)?.superview ?? entity).objectsWithId(id).last as? UIView
     }
     

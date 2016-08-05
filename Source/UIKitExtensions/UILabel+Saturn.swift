@@ -39,10 +39,10 @@ extension UILabel {
         super.setAttributes(attributes)
         guard let attributes = attributes else { return }
         let fontSize: CGFloat
-        if let fontSizeString = attributes["fontSize"], size = fontSizeString.asCGFloat {
+        if let fontSizeString = attributes["fontSize"], let size = fontSizeString.asCGFloat {
             fontSize = size
         } else {
-            fontSize = UIFont.systemFontSize()
+            fontSize = UIFont.systemFontSize
         }
         if let fontName = attributes["fontName"] {
             font = UIFont(name: fontName, size: fontSize)

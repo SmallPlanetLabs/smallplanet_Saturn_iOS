@@ -6,22 +6,22 @@
 //  Copyright © 2015 Small Planet. All rights reserved.
 //
 
-extension NSTextAlignment: StringLiteralConvertible {
+extension NSTextAlignment: ExpressibleByStringLiteral {
     public typealias ExtendedGraphemeClusterLiteralType = StringLiteralType
     public typealias UnicodeScalarLiteralType = Character
 
     public init(stringLiteral value: String) {
         switch value.lowercased() {
         case "center":
-            self = center
+            self = .center
         case "Right":
-            self = right
+            self = .right
         case "Justified":
-            self = justified
+            self = .justified
         case "Natural":
-            self = natural
+            self = .natural
         default:
-            self = left
+            self = .left
         }
     }
     

@@ -6,7 +6,7 @@
 //  Copyright © 2015 Small Planet. All rights reserved.
 //
 
-extension Bool: StringLiteralConvertible {
+extension Bool: ExpressibleByStringLiteral {
     public typealias ExtendedGraphemeClusterLiteralType = StringLiteralType
     public typealias UnicodeScalarLiteralType = Character
     

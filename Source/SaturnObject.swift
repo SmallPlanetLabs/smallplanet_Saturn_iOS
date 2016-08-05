@@ -28,13 +28,13 @@ extension SaturnObject {
     }
     
     public static func readFromString(_ string: String?, intoParent parent: AnyObject? = nil) -> SaturnObject? {
-        guard let string = string, xmlData = string.data(using: String.Encoding.utf8, allowLossyConversion: false) else { return nil }
+        guard let string = string, let xmlData = string.data(using: String.Encoding.utf8, allowLossyConversion: false) else { return nil }
         let xmlDoc = try? AEXMLDocument(xmlData: xmlData, processNamespaces: false)
         return parseElement(xmlDoc?.root, intoParent: parent)
     }
     
     public static func parseElement(_ element: AEXMLElement?, intoParent parent: AnyObject? = nil) -> SaturnObject? {
-        guard let element = element, entityClass = classFromElement(element) else { return nil }
+        guard let element = element, let entityClass = classFromElement(element) else { return nil }
         
         let entity = entityClass.init()
         entity.setAttributes(element.attributes as? [String:String])

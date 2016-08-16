@@ -28,8 +28,8 @@ public class AEXMLElement {
     
     // MARK: Main Properties
     
-    public private(set) weak var parent: AEXMLElement?
-    public private(set) var children: [AEXMLElement] = [AEXMLElement]()
+    public internal(set) weak var parent: AEXMLElement?
+    public internal(set) var children: [AEXMLElement] = [AEXMLElement]()
     
     public let name: String
     public private(set) var attributes: [NSObject : AnyObject]
@@ -88,7 +88,7 @@ public class AEXMLElement {
         return all?.count ?? 0
     }
     
-    public func allWithAttributes <K: NSObject, V: AnyObject where K: Equatable, V: Equatable> (_ attributes: [K : V]) -> [AEXMLElement]? {
+    public func allWithAttributes <K: NSObject, V: AnyObject> (_ attributes: [K : V]) -> [AEXMLElement]? where K: Equatable, V: Equatable {
         var found = [AEXMLElement]()
         if let elements = all {
             for element in elements {
@@ -108,7 +108,7 @@ public class AEXMLElement {
         }
     }
     
-    public func countWithAttributes <K: NSObject, V: AnyObject where K: Equatable, V: Equatable> (_ attributes: [K : V]) -> Int {
+    public func countWithAttributes <K: NSObject, V: AnyObject> (_ attributes: [K : V]) -> Int where K: Equatable, V: Equatable {
         return allWithAttributes(attributes)?.count ?? 0
     }
     
@@ -300,7 +300,7 @@ class AEXMLParser: NSObject, XMLParserDelegate {
     
     func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String: String]) {
         currentValue = String()
-        currentElement = currentParent?.addChild(elementName, attributes: attributeDict)
+        currentElement = currentParent?.addChild(elementName, attributes: attributeDict as [NSObject : AnyObject])
         currentElement?.namespaceURI = namespaceURI
         currentParent = currentElement
     }
